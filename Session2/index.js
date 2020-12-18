@@ -26,3 +26,12 @@ s = prompt("s = ?");
 for(let i = c; i < n; i+=s)
 console.log(i);
 
+// Task 4
+n = prompt("Enter n");
+let factorial = 1;
+for(let i = 2; i <= n; i++) {
+    factorial *= i;
+}
+alert(`the factorial result is ${factorial}`);
+
+// Task 5
