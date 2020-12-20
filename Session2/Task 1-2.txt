@@ -21,3 +21,10 @@ to access the variable outside a function.
 - "const" is used for some unchanged varibles like Pi number, location,...
 - "let" is most-used indentifier. 
 
+2.1
+- "Boolean" is a data type which only has 2 values : true or false.
+2.2. Boolean as a result of:
+- Boolean
+- Comparisons
+- Operations of Boolean (&&, !=, ||)
+- Other data type(null, undefined, NaN, 0, empty string,...)
