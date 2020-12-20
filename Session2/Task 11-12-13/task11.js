@@ -27,25 +27,25 @@ setup = function() {
 	turtle.penColor = turtle.color.blue;
 	// square
 	for(var i = 0; i < 4; i++){
-			turtle.forward(200);
+			turtle.forward(120);
 			turtle.left(90);
 	};
 	// triagle
-	turtle.x = 120;
+	turtle.penColor = turtle.color.green;
 	for(var i = 0; i < 3; i++){
-			turtle.forward(200);
+			turtle.forward(120);
 			turtle.left(120);
 	};
 	// pentagon
-	turtle.x = 100;
+	turtle.penColor = turtle.color.yellow;
 	for(var i = 0; i < 5; i++){
-		turtle.forward(170);
+		turtle.forward(120);
 		turtle.left(75);
 	};
 	// hexagon
-	turtle.x = 80;
+	turtle.penColor = turtle.color.red;
 	for(var i = 0; i < 6; i++){
-		turtle.forward(160);
+		turtle.forward(120);
 		turtle.left(60);
 	};
 	// End of turtle code ------------------------------------------------------------
