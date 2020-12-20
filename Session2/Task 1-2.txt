@@ -1,0 +1,23 @@
+1.1. What are var and const in JavaScript?
+- "var" and "const" in JavaScript are indentifier which is used for variable declaration.
+1.2. What are the differences between let and var?
+- "var" is function scoped or globally scoped
+    + globally scoped when it is declared outside a function, it is available to use in the whole window.
+    + function scoped when it is declared inside a function, it's only can be used in that function
+     calling it outside a function will getting an error say it was not defined.
+    + "var" can be re-declared and updated.
+    + "var" type variables will return "undefined" value before it's declared;
+- "let" is block scoped, it's only accessible inside a block (lines of code inside a curly braces "{}");
+    + "let" type variables can't not be re-declared.
+    + accessing "let" type variables before it's is declared will getting a ReferenceError.
+
+1.3. What are the differences between let and const?
+- "const" variable must be initialized(assign values) during declared, while "let" not necessary.
+- "let" variable can be updated, "const" can't.
+
+1.4. What to use in what cases?
+- "var" is outdated and it's can cause many bugs or errors, but sometime you'll want to use it if you want
+to access the variable outside a function.
+- "const" is used for some unchanged varibles like Pi number, location,...
+- "let" is most-used indentifier. 
+
