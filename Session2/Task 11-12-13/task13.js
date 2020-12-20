@@ -29,10 +29,10 @@ setup = function() {
 	let polygonNumber = prompt('How many polygons do you want:');
 	for(var i = 0, edgesNumber = 3; i < polygonNumber; i++, edgesNumber++){
 		let j = edgesNumber;
-		let degree = 360/edgesNumber; 
+		let stepDegree = 360/edgesNumber; 
 		while(j--) {
-			turtle.forward(50); // keep the shapes not over size if edgesNumber is big
-			turtle.left(degree);
+			turtle.forward(50); 
+			turtle.left(stepDegree);
 		};
 	};
 	// End of turtle code ------------------------------------------------------------
