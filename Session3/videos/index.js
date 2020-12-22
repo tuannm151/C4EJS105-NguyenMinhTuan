@@ -26,7 +26,7 @@
 // for(let i = 0 ; i < movies.length; i++) {
 //     menu[i] = menu[i].toLowerCase();
 // }
-
+// ------------------------------------------------
 // {
 //     let userName;
 //     while (true) {
@@ -39,7 +39,7 @@
 //         }
 //     }
 // }
-
+// ------------------------------------------------
 // {
 //     while (true) {
 //         let userChoice = prompt('How many legs does a spider have? \n 1. None \n 2. 4 legs \n 3. 8 legs \n 4. 12 legs');
@@ -51,8 +51,47 @@
 //         }
 //     }
 // }
-//  let array = [2,1,4,3];
-//  array.sort();  
-//  console.log(array); 
+// ------------------------------------------------
+{   
+    let seqNumbers = prompt('Enter sequence of Number, separated by space');
+    let tempArr = seqNumbers.split(' ');
+    let arr = tempArr.map(x => Number(x));
+    // simple bubble sort algorithm
+    for(let i = 0; i < arr.length - 1; i++) {
+        for(let j = 0; j < arr.length - 1 - i; j++) {
+            if(arr[j] > arr[j + 1]) {
+                [arr[j], arr[j+1]] = [arr[j+1], arr[j]];
+            }
+        }
+    }
+    // arr.sort((a,b) => a - b); quicksort algorithm in library
+    alert(arr);
+    // filter the array into 2 smaller arrays contain odd or even numbers.
+    let oddArr = arr.filter(x => Number(x) % 2 != 0);
+    let evenArr = arr.filter(x => Number(x) % 2 == 0);
+    // remove duplicate numbers in 2 arrays
+    let length = oddArr.length;
+    for(let i = 1; i < length; ) {
+        if(oddArr[i] == oddArr[i - 1]) {
+            oddArr.splice(i,1);
+            length--;
+        }
+        else {
+            i++;
+        }
+    }
+    // remove duplicate numbers in 2 arrays using temporary array
+    let tempEvenArr = [];
+    tempEvenArr.push(evenArr[0]);
+    for(let i = 1; i < evenArr.length; i++) {
+        if(evenArr[i] != evenArr[i - 1]) {
+            tempEvenArr.push(evenArr[i]);
+        }
+    }
+    alert(oddArr);
+    alert(tempEvenArr)
+}
+
+
 
 
