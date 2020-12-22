@@ -27,7 +27,7 @@ setup = function() {
 	turtle.penColor = turtle.color.blue;
 	
 	let polygonNumber = prompt('How many polygons do you want:');
-	for(var i = 0, edgesNumber = 3; i < polygonNumber; i++, edgesNumber++){
+	for(let i = 0, edgesNumber = 3; i < polygonNumber; i++, edgesNumber++){
 		let j = edgesNumber;
 		let stepDegree = 360/edgesNumber; 
 		while(j--) {
