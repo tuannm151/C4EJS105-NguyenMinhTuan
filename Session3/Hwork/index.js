@@ -38,7 +38,7 @@
             //     console.log(`${i}. ${products[i]}`);
             // }
             let tempList = []; 
-            let tempItem; // using temporary varible to modify then push to tempList array.
+            let tempItem; // modify temporary varible then push it to tempList array.
             for(let i = 0; i < products.length; i++) {
                 tempItem = `${i+1}.  ${products[i]}`;
                 tempList.push(tempItem);

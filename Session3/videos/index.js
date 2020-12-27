@@ -28,10 +28,10 @@
 // }
 // ------------------------------------------------
 // {
-//     let userName;
+//     let userName, maxLength = 15;
 //     while (true) {
 //         userName = prompt('Register an username');
-//         if (userName.length < 15) {
+//         if (userName.length < ) {
 //             alert('Good username');
 //             break;
 //         } else {
@@ -69,7 +69,7 @@
     // filter the array into 2 smaller arrays contain odd or even numbers.
     let oddArr = arr.filter(x => Number(x) % 2 != 0);
     let evenArr = arr.filter(x => Number(x) % 2 == 0);
-    // remove duplicate numbers in 2 arrays
+    // remove duplicate numbers in odd arrays not using temporary array
     let length = oddArr.length;
     for(let i = 1; i < length; ) {
         if(oddArr[i] == oddArr[i - 1]) {
@@ -80,7 +80,7 @@
             i++;
         }
     }
-    // remove duplicate numbers in 2 arrays using temporary array
+    // remove all duplicate numbers in even arrays using a temporary array
     let tempEvenArr = [];
     tempEvenArr.push(evenArr[0]);
     for(let i = 1; i < evenArr.length; i++) {
