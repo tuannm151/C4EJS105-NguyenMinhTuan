@@ -268,7 +268,7 @@
 //     }
 //     // log out jobTitle, locations, skills, jobSalary of all job hits
 //     for(let item of jobData.hits) {
-//         // log jobTitle, salary, locations
+//         // log joMN                          MGGbTitle, salary, locations
 //         let {jobTitle, jobSalary, locations} = item;
 //         console.log(`Title: ${jobTitle}`);
 //         console.log(`Salary: ${jobSalary}`);
