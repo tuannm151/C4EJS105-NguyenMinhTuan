@@ -1,0 +1,18 @@
+.task1 {
+    color: red;
+}
+.task2 {
+    background-color: #00ff00;
+}
+.task3 {
+    font-size: 24px;
+}
+ul > li {
+   font-weight: bold;
+}
+.item > span {
+    font-size: 18px;
+}
+.item > div > span {
+    font-style: italic;
+}
