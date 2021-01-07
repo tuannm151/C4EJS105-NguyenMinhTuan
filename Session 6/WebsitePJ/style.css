@@ -38,7 +38,9 @@ body {
 }
 
 button {
-    background-color: #3796;
+    background: #00bf8f;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #001510, #00bf8f);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #001510, #00bf8f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border: none;
     color: white;
     padding: 15px 25px;
@@ -48,7 +50,7 @@ button {
 }
 
 button:hover {
-    background-color: #5CDB95;
+    background: #00bf8f; 
 }
 .album_link {
     font-size: 30px;
