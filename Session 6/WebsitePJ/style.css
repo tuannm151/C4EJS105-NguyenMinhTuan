@@ -20,6 +20,7 @@ body {
     flex: 35%;
     padding: 60px;
     margin-top: 35px;
+    text-align: center;
 }
 
 .list_artist {
@@ -27,13 +28,31 @@ body {
     color: white
 }
 .name {
-    margin-left: 45%;
     font-family: 'Oswald';
     font-size: 30px;
 }
 .des {
     text-align: center;
     font-family: 'Cardo';
-    font-size: 18px;
+    font-size: 22px;
 }
+
+button {
+    background-color: #3796;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    font-family: 'Oswald';
+    border-radius: 10px;
+    vertical-align: middle;
+}
+
+button:hover {
+    background-color: #5CDB95;
+}
+.album_link {
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
 
