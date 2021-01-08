@@ -1,0 +1,17 @@
+.holder {
+    border: solid 1px gray;
+    display: block;
+    background-color: rgb(96, 194, 224);
+    padding: 15px;
+    width: 40%;
+    height: auto;
+}
+#task5 {
+    background-color: rgb(229, 229, 229);
+}
+#task8 {
+    background-color: rgb(229, 229, 229);
+}
+#task11 {
+    background-color: rgb(229, 229, 229);
+}
