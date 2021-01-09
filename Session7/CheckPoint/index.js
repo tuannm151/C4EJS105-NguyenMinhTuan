@@ -104,39 +104,60 @@
 	addItemToHtml = (itemName) => {
 		itemList.insertAdjacentHTML("beforeend", `<li><span>${itemName}</span><button>Remove</button></li>`);
 	}
-	// add database's items
+	// add current database's items (in items array)
 	for (let item of items) {
 		addItemToHtml(item);
 	}
+	// read all database's item element showed on html
 	let listTag = itemList.getElementsByTagName('li'); 
+	// function that update all html collection
 	updateAllList = () => {
 		itemList = document.getElementById('item_list_ul');
 		listTag = itemList.getElementsByTagName('li'); 
 	}
+	// function that delete item in database and html UI
 	deleteElement = (element) => {
 		// delete item in database
 		items.splice(items.indexOf(element.firstChild.innerHTML),1);
 		// delete item in html interface
 		element.remove();
-		console.log(items);
 		updateAllList();
+		// console.log
+		console.log(`Item "${element.firstChild.innerHTML}" removed`);
+		console.log(items);
 	}
+	// add event listener for all exist database's item
 	for(let item of listTag) {
 		item.lastChild.addEventListener('click', () => {
 			deleteElement(item);
 		});
 	}
-	// adding using add button
-	let btn = document.getElementById('add_btn');
-	btn.addEventListener('click', () => {
+	// new item - function that add item to database and show on html interface
+	addItem = () => {
 		let newItem = document.getElementById('item_input').value;
-		addItemToHtml(newItem);
+		// check if user have not entered anything
+		if(newItem == '' || newItem == null) {
+			alert('Please enter new item name!');
+			return;
+		}
+		// push item to database and show it on UI then update all html collection
 		items.push(newItem);
+		addItemToHtml(newItem);
 		updateAllList();
+		// console.log 
+		console.log(`Item ${newItem} added`);
+		console.log(items);
+		// add event listener for new added item
 		let newElement = listTag[listTag.length - 1];
 		newElement.lastChild.addEventListener('click', () => {
 			deleteElement(newElement);
 		});
+	}
+	// adding using add button
+	let btn = document.getElementById('add_btn');
+	btn.addEventListener('click', () => {
+		addItem();
+		// reset input after added new item
 		document.getElementById('item_input').value = null;
 	});
 }	
