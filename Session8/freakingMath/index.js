@@ -29,6 +29,8 @@ increaseScore = () => {
     let currentScore = Number(document.getElementById('score').innerHTML);
     document.getElementById('score').innerHTML = ++currentScore;
 }
+let falseAudio = new Audio('fail_sound.mp3');
+let trueAudio = new Audio('true_sound2.mp3');
 firstQuizz = () => {
     let num1 = 1+Math.floor(Math.random()*9);
     let num2 = 1+Math.floor(Math.random()*9);
@@ -53,22 +55,26 @@ firstQuizz();
 document.getElementById('wrong').addEventListener('click', () => {
     playerAns = false;
     if(trueAnswer == playerAns) {
+        trueAudio.play();
         increaseScore();
         clearInterval(id);
         progressBarCountDown(quizzTimeLimit);
         firstQuizz();
     } else  {
+        falseAudio.play();
         endgame();
     }
 });
 document.getElementById('right').addEventListener('click', () => {
     playerAns = true;
     if(trueAnswer == playerAns) {
+        trueAudio.play();
         increaseScore();
         clearInterval(id);
         progressBarCountDown(quizzTimeLimit);
         firstQuizz();
     } else  {
+        falseAudio.play();
         endgame();
     }
 });
