@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/193000bb3b.js" crossorigin="anonymous"></script>
+    <script src="data.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="task1">
+        <h1>Task 1</h1>
+        <button>-</button><span id="counter_show">0</span><button>+</button>
+    </div>
+    <h1>Task 2</h1>
+    <div id="task2">
+        <input type="number"> <button>Start</button> <button>Stop</button>
+        <p>0</p>
+    </div>
+    <h1>Task 3</h1>
+    <div class="task3">
+        <button id="reload_btn"><i class="fas fa-redo"></i>Reload</button>   
+        <br>                                   
+        <div id="quote">
+            <p id="quote_content">Khong lam ma doi co an thi an...</p>
+            <p id="quote_author">Huan Hoa Hong</p>
+        </div>
+    </div>
+    <div id="task4">
+        <h1>Task 4</h1>
+        <div>
+            <input type="text" placeholder="Enter project" class="newpj">
+            <input type="text" placeholder="Enter task" class="newpj">
+            <input type="text" placeholder="Time spent" class="newpj">
+            <button id="newpj_add">Add</button>
+            <button id="newpj_clear">Clear</button>
+        </div>
+        <table>
+            <thead>
+               <th>Project</th>
+               <th>Task</th>
+               <th>Time spent</th>   
+               <th>Actions</th>
+            </thead>
+            <tbody id="ts_body">
+            </tbody>
+        </table>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+#counter_show {
+    margin: 5px;
+}
+#task2 {
+    width: 250px;
+    text-align: right;
+    background: linear-gradient(45deg, rgb(239, 239, 251), rgb(120, 120, 231));
+    padding: 5px;
+    height: 55px;
+}
+#task2 p {
+    margin-top: 7px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.task3 {
+    border: 5px dotted rgb(154, 152, 152);
+    width: 90%;
+    height: 400px;
+    margin: auto;
+}
+
+#reload_btn {
+    cursor: pointer;
+    font-size: 17px;
+    width: 150px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    background: transparent;
+    display: inline;
+    float: right;
+    outline: white;
+}
+
+.fa-redo {
+    padding-right: 5px;
+}
+
+#quote {
+    text-align: right;
+    padding-top: 15%;
+    padding-right: 13%;
+}
+#quote_content {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+}
+#quote_author {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#task4 table, th, td {
+    margin-top: 15px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/193000bb3b.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="content">
+        <!-- Start button-->
+        <div id="start_content">
+            <button id="start_button"><i class="fas fa-play"></i></button>
+            <p>Start!</p>
+        </div>
+        <!-- Play content-->
+        <div id="play_content">
+            <div id="full_progress_bar">
+                <div id="progress_bar"></div>
+            </div>
+            <div class="game_score">
+                <span id="score">0</span>
+            </div>
+            <div class="expression">
+                <span id="first_number">5</span> +
+                <span id="second_number">10</span> = 
+                <span id="random_sum">20</span>
+            </div>
+            <div class="ans_button">
+                <button id="wrong">✖</button>
+                <button id="right">✔</button>
+            </div>
+        </div>
+        <div id="endgame">
+            <p id="endgame_text">End game!</p>
+            <a href="index.html">Click here</a> to play again!
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

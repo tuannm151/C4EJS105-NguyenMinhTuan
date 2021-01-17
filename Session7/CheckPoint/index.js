@@ -44,7 +44,7 @@
 		document.getElementById('holder5').innerHTML = showItems;
 	}
 }
-// Task 6 // using "element name after read".remove()
+// Task 6 // using "element's name after read".remove()
 
 // Task 7 
 {

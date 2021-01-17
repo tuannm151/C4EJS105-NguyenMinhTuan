@@ -1,0 +1,92 @@
+.content {
+    position: relative;
+    max-width: 100%;
+    padding: 10px;
+    margin:10px auto;
+}
+#start_content {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    margin-top: 20%;
+    display: block;
+}
+.fa-play {
+    font-size: 30px;
+    color: red;
+}
+#start_button {
+    width: 150px;
+    border: 7px solid red;
+    border-radius: 50px;
+    padding: 20px 40px;
+    outline: none;
+    background-color: white;
+}
+#start_button:hover {
+    background-color: rgb(231, 231, 231);
+}
+#play_content {
+    position: relative;
+    text-align: center;
+    border: 3px dotted rgb(170, 170, 170);
+    width: 350px;
+    margin: 10% auto;
+    height: 500px;
+    padding: 20px;
+    display: none;
+}
+
+button {
+    padding:10px 20px;
+    font-size:40px!important;
+    overflow: visible;
+    border:none;
+    margin: 20px;
+    cursor: pointer;
+    color:#fff;
+}
+.game_score {
+    padding-top: 10px;
+    text-align: right;
+    font-size: 20px;
+}
+
+.ans_button {
+    padding: 10px auto;  
+    color:#fff; 
+}
+.ans_button #right {
+    background-color: #27ae60;
+}
+.ans_button #wrong {
+    background-color: #c0392b;
+}
+.expression {
+    margin: 25% auto 33% auto;
+    font-size: 48px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#endgame {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    background-color: red;
+    width: 300px;
+    margin: 20% auto;
+    display: none;
+}
+
+#full_progress_bar {
+    background-color: lightgray;
+    width: 100%;
+}
+#progress_bar {
+    height: 5px;
+    background-color: green;
+    width: 100%;
+}
+
+
+
