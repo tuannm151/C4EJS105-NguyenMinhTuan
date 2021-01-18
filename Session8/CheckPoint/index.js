@@ -109,7 +109,7 @@
 		let newPjName = newProjectInputs[0].value;
 			let newPjTask = newProjectInputs[1].value;
 			let newPjTime = newProjectInputs[2].value;
-		if (isUpdate == false) {
+		if (isUpdating == false) {
 			addNewProject(newPjName, newPjTask, newPjTime);
 			// reset input on html interface
 			clearInput();
@@ -135,6 +135,3 @@
 	});
 }
 // task 5
-{
-	
-}

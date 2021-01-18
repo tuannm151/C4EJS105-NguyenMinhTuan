@@ -16,6 +16,38 @@
             <button id="start_button"><i class="fas fa-play"></i></button>
             <p>Start!</p>
         </div>
+        <!--Setting-->
+        <div id="game_setting">
+            <div class="setting_title"><i class="fas fa-cog"></i> Setting</div>
+            <div id="setting_items">
+                <div id="game_UI">
+                    <span class="check_box_container">
+                        <input type="checkbox" id="score_box" onclick="scorebox()"> 
+                        <span class="checkmark"></span>
+                        <span>Score</span>
+                    </span>
+                    <span class="check_box_container">
+                        <input type="checkbox" id="timer_box" onclick="timerbox()">
+                        <span class="checkmark"></span>
+                        <span>Timer</span>
+                    </span>
+                </div>
+                <hr>
+                <div class="setting_title"><i class="fab fa-accessible-icon"></i>Difficult</div>    
+                <div id="difficulties">
+                    <span class="check_box_container">
+                        <input type="checkbox" id="easy_box" checked="checked" onclick="easybox()">
+                        <span class="checkmark"></span> 
+                        <span>Easy</span>
+                    </span>
+                    <span class="check_box_container">
+                        <input type="checkbox" id="hard_box" onclick="hardbox()">
+                        <span class="checkmark"></span>
+                        <span>Hard</span>
+                    </span>
+                </div>
+            </div>
+        </div>
         <!-- Play content-->
         <div id="play_content">
             <div id="full_progress_bar">
@@ -33,6 +65,7 @@
                 <button id="wrong">✖</button>
                 <button id="right">✔</button>
             </div>
+            <div id="pause_btn"><i class="far fa-pause-circle"></i></div>
         </div>
         <div id="endgame">
             <p id="endgame_text">End game!</p>
