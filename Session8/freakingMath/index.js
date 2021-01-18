@@ -109,6 +109,7 @@ firstQuizz = () => {
 endgame = () => {
     document.getElementById('play_content').style.display = 'none';
     document.getElementById('endgame').style.display = 'block';
+    document.getElementById('high_score').innerHTML = document.getElementById('score').innerHTML;
 }
 
 
