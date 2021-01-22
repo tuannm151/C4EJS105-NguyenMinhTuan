@@ -2,6 +2,10 @@ let recipes = [
     {
         recipe_name: 'Gà chiên nước mắm',
         recipe_id: '0',
+        category: 'asia', // phân loại món á, món âu, ...
+        difficult: 'medium', // độ khó
+        time: '45', // thời gian nấu
+        type: 'main', // loại: bữa chính, bữa sáng, bữa tối
         recipe_ingredients: [
             {
                 id: '5',
@@ -35,7 +39,8 @@ let recipes = [
                 id: '4',
                 amount: '2',
             },
-        ]
+        ],
+        recipe_instruction: ['  Rửa cánh gà, chà nhẹ muối lên da gà và rửa dưới vòi nước để bỏ bớt mùi hôi. Cắt ở khớp khuỷu tay hoặc thành miếng nhỏ tùy ý.','Đặt cánh gà vào bát, ướp với hạt nêm, 1 thìa cà phê đường, 2 thìa cà phê nước mắm. Ướp trong khoảng 15 phút.', ' Hành tím bóc vỏ băm nhỏ. Tỏi bóc vỏ cắt nhỏ một ít, một ít để nguyên múi.','  Pha 3 thìa canh nước mắm, 2 thìa cà phê đường, 1/3 thìa cà phê hạt tiêu rồi khuấy đều cho đến khi tan.','Cho dầu vào chảo, đợi nóng thì cho cánh gà vào chiên vàng khoảng 15 - 20 phút. Vớt ra đặt lên giấy thấm bớt dầu ăn. Sau đó cho tỏi vào chảo phi thơm vớt ra để riêng.','  Đổ dầu ăn ra, chừa lại một ít, rồi cho hành tím băm vào chảo phi thơm, tiếp theo cho gà và tỏi đã phi thơm vào xào cùng. Sau đó đổ chén nước sốt vào xào khoảng 3-4 phút thì tắt bếp.','Múc cánh gà chiên sốt nước mắm ra đĩa, trang trí ớt hoặc rau ngò cho đẹp mắt nhé!'],
     },
 ]
 
