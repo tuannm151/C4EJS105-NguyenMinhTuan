@@ -6,6 +6,7 @@ let recipes = [
         difficult: 'medium', // độ khó
         time: '45', // thời gian nấu
         type: 'main', // loại: bữa chính, bữa sáng, bữa tối
+        img: 'img/recipes-images/ga-chien-nuoc-mam.jpg', // url cung dc
         recipe_ingredients: [
             {
                 id: '5',
