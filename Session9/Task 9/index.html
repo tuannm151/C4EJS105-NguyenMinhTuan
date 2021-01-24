@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="data.js"></script>
+</head>
+<body>
+    <div class="main">
+        <h1>Itunes's Top Songs</h1>
+        <div class="filter">
+            <div class="filter_title">
+                <p>Feed type</p>
+                <div class="custom-select">
+                    <select name="" id="feed_type">
+                        <option value="albums" id="top_albums">Top albums</option>
+                        <option value="songs" id="top_songs">Top songs</option>
+                    </select>
+                </div>
+            </div>
+            <div class="filter_title">
+                <p>Quantity</p>
+                <div class="custom-select">
+                    <select name="" id="quantity">
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="25">25</option>
+                        <option value="30">30</option>
+                        <option value="50">50</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="main_content" id="content">
+            
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

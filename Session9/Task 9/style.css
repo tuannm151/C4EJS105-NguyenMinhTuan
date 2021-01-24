@@ -1,0 +1,24 @@
+h1 {
+    text-align: center;
+}
+.filter {
+    margin-left: 30%;
+}
+.filter_title {
+    display: inline-block;
+    margin: 5px;
+}
+.main_content {
+    display: flex;
+    flex: 25%;
+    flex-wrap: wrap;
+    margin: 0 15%;
+    width: 70%;
+}
+.song_detail {
+    display: block;
+    width: 170px;
+}
+.music_item {
+    padding: 10px;
+}
