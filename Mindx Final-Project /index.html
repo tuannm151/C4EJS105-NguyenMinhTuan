@@ -4,19 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fine Dish</title>
-    <script src="data/dishs/allData.js"></script>
 </head>
 <body>
-    <div>
-        <p id="recipe_name"></p>
-        <div><span>Loại món:</span> <span id="category"></span> </div>
-        <div><p>Thời gian nấu: <span id="time"></span>p</p></div>
-        <div><p>Độ khó: <span id="difficult"></span></p></div>
-        <div><p>Loại bữa: <span id="type"></span></p></div>
-        <ul id="list_ingrediens"></ul>
-        <p>Các bước làm</p>
-        <ol id="list_instructions"></ol>
+    <!--Header show logo and login, user's feature-->
+    <div class="header"></div>
+    <!--Popup login form-->
+    <div class="login_form"></div>
+    <!--User's library page-->
+    <div class="user_libary_page"></div>
+    <!--Navigation bar-->
+    <div class="nav_bar"></div>
+    <!--Cart always show on screen at bottom right-->
+    <div class="user_cart"></div>
+    <div class="main_content"> 
+        <!--Trending show 3 most favorated items-->
+        <div class="trending"></div>
+        <!--filter - search bar based on categories and show items below-->
+        <div class="item_container"></div>
     </div>
+    <!--Page show item's detail-->
+    <div class="item_detail_page"></div>
+    <div class="footer"></div>
+    
     <script src="js/index.js"></script>
 </body>
 </html>
