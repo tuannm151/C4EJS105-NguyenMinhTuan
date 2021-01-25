@@ -104,7 +104,8 @@ let recipes = [
     "type": "side",
     "ingredients": [34,35,36,37,23,29,11,20,2,0,38,39,24],
     "ingredients_amount": [800,1/2,1/3,200,1,2,3,2,2,1,10,30,20],
-    "img": "http://culinaryfrank.com/wp-content/uploads/2019/04/culinary-frank-bibimbap-7-683x1024.jpg"
+    "img": "http://culinaryfrank.com/wp-content/uploads/2019/04/culinary-frank-bibimbap-7-683x1024.jpg",
+    recipe_instruction: [' Cải bó xôi được trần qua nước sôi trong khoảng 30 giây. Sau đó, vớt rau ra bát và để nguội (Lưu ý: Nên vắt rau cho bớt lượng nước thừa). Tiếp theo thái nhỏ rau cho vừa ăn và ướp rau với ít muối, ít dầu mè , ít vừng rang.','Tiếp tục làm tương tự lần lượt với nấm kim châm và giá đỗ và cũng được ướp đầy đủ gia vị như bước 1.','Xào lần lượt nấm hương và cà rốt đến chín mềm (Nhớ cho ít muối nhé).','Xào lần lượt nấm hương và cà rốt đến chín mềm (Nhớ cho ít muối nhé).','Lấy thịt bò từ trong tủ lạnh ra đã ướp cho vào chảo xào đến khi săn lại là được Lưu ý: không nên xào kỹ quá để thịt bò dai bạn nhé.','Cho vào mỗi bát đá Hàn Quốc 1 suất cơm nén nhẹ (Nhớ phết một lớp dầu ăn mỏng)','Xếp tất cả các nguyên liệu đã sơ chế cho lên trên cơm.'],
     },
     {
     "id": "9",
@@ -115,7 +116,8 @@ let recipes = [
     "type": "side",
     "ingredients": [45,34,29,57,23,35,60,37,42,0,27,16,43],
     "ingredients_amount": [500,300,2,200,1,150,100,10,20,20,50,30],
-    "img": "https://cdn.tgdd.vn/Files/2019/10/17/1209414/cach-lam-pho-xao-gion-xao-mem-cuc-ngon-de-lam-tai-nha-14.jpg"
+    "img": "https://cdn.tgdd.vn/Files/2019/10/17/1209414/cach-lam-pho-xao-gion-xao-mem-cuc-ngon-de-lam-tai-nha-14.jpg",
+    recipe_instruction: ['Thịt bò để ngăn đá tủ lạnh cho hơi cứng lại, thái thật mỏng. Hành, tỏi bóc vỏ, băm nhỏ. Ướp thịt bò với dầu hào, 1 thìa cafe gia vị, hạt tiêu, ½ chỗ hành tỏi băm. Để 30’ cho ngấm.','Sơ chế các nguyên liệu khác',' Chuẩn bị bánh phở','Áp chảo bánh phở','Xào phở khoảng 1’ sau đó dàn đều bánh phở ra khắp chảo, hạ lửa xuống mức trung bình, để nguyên không đảo trong khoảng 3’. Kiểm tra thấy bánh phở đã chuyển màu vàng, lắc nhẹ chảo thấy cả khối bánh phở di chuyển được thì lặt mặt, áp chảo tiếp 3’. Trút bánh phở đã áp chảo giòn 2 mặt ra đĩa.','Dùng chảo sâu lòng. Đun nóng khoảng 1 thìa (15 ml) dầu ăn. Phi thơm phần hành, tỏi còn lại. Để lửa rất lớn. Cho thịt bò vào xào nhanh tay đến khi thịt chín tái, trút ra bát, để riêng.','Cho thêm 1/2 thìa dầu ăn, để lửa lớn. Cho hành tây vào xào chín. Sau đó cho cà rốt và rau cải vào xào đến chín. Tiếp tục cho nấm hương vào chảo, đảo đều, sau đó cho cà chua bổ múi cau vào, đảo thêm khoảng 1 – 2 phút để cà chua hơi mềm. Nêm lại gia vị cho vừa miệng.','Hòa bột năng với khoảng nửa bát con nước lạnh. Trút lại bát thịt bò xào sơ vào lại chảo, đảo đều. Cho bột năng vào chảo, nhanh tay đảo cho bột hòa quyện với hỗn hợp rau thịt. Cho hành lá, rau thơm thái khúc vào chảo, đảo đều và tắt bếp.','Cho bánh phở áp chảo giòn 2 mặt lên đĩa, có thể dùng kéo cắt bánh phở thành từng miếng cho dễ ăn. Đổ hỗn hợp thịt bò xào rau lên trên, rắc chút hạt tiêu. Ăn kèm tương ớt và chanh.'],
     },
     {
     "id": "10",
@@ -126,7 +128,8 @@ let recipes = [
     "type": "main",
     "ingredients": [40,46,29,47,45,0,43,48,49,50,51,7],
     "ingredients_amount": [800,2,2,160,400,1/3,2,10,1.5,3,3,3],
-    "img": "http://culinaryfrank.com/wp-content/uploads/2019/04/culinary-frank-padthai-8-768x432.jpg"
+    "img": "http://culinaryfrank.com/wp-content/uploads/2019/04/culinary-frank-padthai-8-768x432.jpg",
+    recipe_instruction: ['Sơ chế nguyên liệu : Tôm lọt vỏ, đậu hũ đập dập, hành lá cắt nhỏ','Bạn cho 2 thìa giấm me, 2 thìa nước mắm, 2 thìa nước tương, ½ thìa ớt bột, ½ thìa tiêu, 2 thìa tương ớt vào chén và trộn đều lên','Bắc chảo lên bếp đổ vào một ít dầu, cho tỏi vào phi thơm. Tiếp theo, bạn cho ức gà, tôm vào xào cho săn lại. Sau đó, cho phở, đậu hũ vào đảo đều','Tiếp tục cho 2 quả trứng vào và đảo thật đều tay. Khi trứng đã khô lại, bạn cho nước xốt vào đảo nhanh tay. Thêm vào chảo nước dùng gà tiếp tục đảo. Cuối cùng, bạn cho hẹ và giá vào đảo lên một lần nữa rồi tắt bếp'],
     },
     {
     "id": "11",
@@ -137,7 +140,8 @@ let recipes = [
     "type": "main",
     "ingredients": [40,41,0,42,43,44,7,20,2,10],
     "ingredients_amount": [500,200,1/3,1,4,3,2,1,2,3],
-    "img": "http://culinaryfrank.com/wp-content/uploads/2019/05/culinary-frank-thai-shrimp-cake-1.jpg"
+    "img": "http://culinaryfrank.com/wp-content/uploads/2019/05/culinary-frank-thai-shrimp-cake-1.jpg",
+    recipe_instruction: ['Đầu tiên trộn đều thịt tôm và thịt gà đã xay nhuyễn cùng với hạt tiêu, nước mắm, dầu mè. Để hỗn hợp nghỉ cho gia vị ngấm khoảng 5 phút.','Đối với nước cốt dừa và red curry paste của Thái, chúng ta bắc lên chảo nhỏ, đảo sôi.','Tiếp đến chúng ta cho các loại gia vị, hỗn hợp cốt dừa curry ngô ngọt, đậu đũa, dầu mè, lá chanh thái sợi, 1/2 lòng đỏ trứng gà vào thịt tôm gà ở trên. Lưu ý trộn thật đều nhé.','Bước tạo hình chả thì chúng ta có thể tạo hình theo ý muốn. Mình thì thích hình donut, nên làm theo hình donut. Hihi.','Sau khi tạo hình chúng ta sẽ phủ bột chiên giòn và bột chiên xù bên ngoài. Rồi sau đó chiên chả khi dầu nóng. Ưu tiên chiên ngập dầu nhé. (ảnh này mình chiên cùng gà cuốn lá nếp)','Sau khi chín, cho chả ra giấy thấm dầu và bầy ra đĩa, thưởng thức chả chấm cùng sốt chua ngọt hoặc sốt xí muội (mình hay dùng của cholimex, vị chuẩn lắm nhé)'],
     },
     {
     "id": "12",
@@ -148,7 +152,8 @@ let recipes = [
     "type": "main",
     "ingredients": [41,16,19,11,53,38,13,52],
     "ingredients_amount": [800,3,1/2,2,1,3,3,50],
-    "img": "http://culinaryfrank.com/wp-content/uploads/2018/11/culinary-frank-dong-po-pork-4.jpg"
+    "img": "http://culinaryfrank.com/wp-content/uploads/2018/11/culinary-frank-dong-po-pork-4.jpg",
+    recipe_instruction: ['Thịt ba chỉ làm sạch','Bỏ thịt vào chảo dầu nóng chiên','Phi 1/2 hành khô bằm nhuyễn cho thơm',' cho thịt vào', 'đảo qua','Khi thịt bắt đầu ngấm đều gia vị và có màu đẹp', 'tiếp tục cho phần hành còn lại',' gừng đã xắt lát',' hồi','đinh hương', 'đường', 'ớt và 2 chén cơm nước lạnh vào nồi thịt kho'],
     },
     {
     "id": "13",
@@ -159,7 +164,8 @@ let recipes = [
     "type": "main",
     "ingredients": [55,2,17,56,1,20,38,30,61,51,0,12],
     "ingredients_amount": [3000,1/4,2,1/2,1/4,1/2,1,1,1,2,3,2],
-    "img": "https://toinayangi.vn/wp-content/uploads/2015/03/lam-mon-xa-xiu-ngon-dung-kieu-quang-dong-01.jpg"
+    "img": "https://toinayangi.vn/wp-content/uploads/2015/03/lam-mon-xa-xiu-ngon-dung-kieu-quang-dong-01.jpg",
+    recipe_instruction: ['Đặt chảo to lên bếp, cho 1 chút dầu ăn vào, đợi đến khi nóng thì cho hành tỏi vào phi thơm vàng. Cho thêm dầu hào, đường, nước sốt hosin và xì dầu. Đun ở lửa nhỏ nhất khoảng 2 phút',' Cho vào chảo 1 chút nước cốt dừa đen, khuấy đều. Cuối cùng, cho bột năng vào chảo để tạo độ sệt cho nước sốt','Đổ nước sốt riêng ra một cái bát, vậy là nước sốt của bạn đã hoàn thành rồi','Làm nóng lò ở nhiệt độ 220 độ C, lấy chổi quét một lớp sốt xá xíu lên trên bề mặt miếng thịt và nướng từ 15-20 phút. Sau đó quết thêm một lớp mật ong lên bề mặt miếng thịt, nướng thêm 10 phút nữa','   Lấy thịt ra ngoài, nếu thích ăn ngọt thì quét thêm một lớp mật ong nữa lên miếng thịt, thái lát mỏng','Bày xá xíu ra đĩa, rắc vừng đen và rau thơm để trang trí'],
     },
     {
     "id": "14",
@@ -170,7 +176,8 @@ let recipes = [
     "type": "side",
     "ingredients": [45,34,47,62,63,0,42,2,59,64,1,7,65,4],
     "ingredients_amount": [500,300,100,40,40,10,10,30,30,10,5,5,20,15,2,30],
-    "img": "http://www.savourydays.com/wp-content/uploads/2019/02/c%C3%A1ch-l%C3%A0m-ph%E1%BB%9F-cu%E1%BB%91n-banner.jpg"
+    "img": "http://www.savourydays.com/wp-content/uploads/2019/02/c%C3%A1ch-l%C3%A0m-ph%E1%BB%9F-cu%E1%BB%91n-banner.jpg",
+    recipe_instruction: ['Sơ chế nguyên liệu:Thịt bò rửa sạch, thấm khô, thái thật mỏng.  Cho vào âu thịt 1 thìa cafe đường, đảo đều, để 10’ cho thấm (Ướp đường trước sẽ giúp thịt được mềm và đậm đà hơn). Sau đó ướp thịt với 1 thìa cafe bột nêm/ bột gia vị, 1 thìa cafe dầu hào, 1/2 thìa cafe hạt tiêu. Để 15’ cho thấm.Giá đỗ rửa sạch Hành, tỏi bóc bỏ, đập dập, băm nhỏ'],
     },
     {
     "id": "15",
@@ -181,7 +188,8 @@ let recipes = [
     "type": "main",
     "ingredients": [66,67,68,35,69,23,70,16,43,71,42,19,37,38,1,7,4],
     "ingredients_amount": [50,50,50,50,50,30,100,20,10,10,10,40,8,6,6,30],
-    "img": "http://www.savourydays.com/wp-content/uploads/2019/01/bongxaofinal-1024x683.jpg"
+    "img": "http://www.savourydays.com/wp-content/uploads/2019/01/bongxaofinal-1024x683.jpg",
+    recipe_instruction: ['Sơ chế bóng bì','Sơ chế các nguyên liệu khác : cà rốt, súp lơ xanh, hành tây','Đun sôi nồi nước bỏ hết rau củ vào','Xào thịt với hành tây','Cho nấm hương vào xào cùng','Trút ra đĩa,rắc thêm hạt tiêu'],
     },
     {
     "id": "16",
@@ -192,7 +200,8 @@ let recipes = [
     "type": "side",
     "ingredients": [71,72,73,42,0,74,7,59,2,4,65],
     "ingredients_amount": [1,4,2,1,2,1,1,1,1,1,1],
-    "img": "http://www.savourydays.com/wp-content/uploads/2012/04/OcXaoSaOt.jpg"
+    "img": "http://www.savourydays.com/wp-content/uploads/2012/04/OcXaoSaOt.jpg",
+    recipe_instruction: ['Xà lách, rau thơm các loại nhặt rửa thật sạch, vẩy khô','Xào nhân:Cho hành, tỏi băm vào phi thật thơm','Cuốn phở','Pha nước chấm'],
     },
     {
     "id": "17",
@@ -203,7 +212,8 @@ let recipes = [
     "type": "main",
     "ingredients": [5,42,19,2,7,4],
     "ingredients_amount": [600,1,1,2,1,1],
-    "img": "http://www.savourydays.com/wp-content/uploads/2012/02/GaRangGung.jpg"
+    "img": "http://www.savourydays.com/wp-content/uploads/2012/02/GaRangGung.jpg",
+    recipe_instruction: ['Đùi gà trụng nước sôi, rửa sạch','Cho chút dầu vào chảo phi thơm tỏi, cho nốt chỗ gừng còn lại vào, đổ gà đã ướp vào đảo nhẹ tay','Thêm 1/2 bát con nước, đun lửa vừa để phần thịt bên trong mềm hơn, đảo nhẹ tay, thêm xíu xì dầu cũng đc','Nêm nếm lại cho vừa'],
     },
     {
     "id": "18",
@@ -214,7 +224,8 @@ let recipes = [
     "type": "main",
     "ingredients": [40,70,6,0,7,2,17],
     "ingredients_amount": [200,200,1,2,1,1,1,1],
-    "img": "http://www.savourydays.com/wp-content/uploads/2011/05/Tom-rang-thit.jpg"
+    "img": "http://www.savourydays.com/wp-content/uploads/2011/05/Tom-rang-thit.jpg",
+    recipe_instruction: ['Tôm rút chỉ đen',' rửa sạch',' thấm khô','Thịt ba chỉ xắt miếng mỏng','Hành',' tỏi băm nhỏ','Phi hành tỏi cho thật thơm','cho thịt vào đảo đều','Đợi thịt hết màu đỏ thì cho tôm vào đảo cùng thịt','Khi tôm chuyển sang màu đỏ và hơi săn lại thì cho nước mắm',' nước hàng',' đường','Đảo đều cho tôm và thịt'],
     },
     {
     "id": "19",
@@ -225,7 +236,8 @@ let recipes = [
     "type": "bf",
     "ingredients": [75,27,13,76],
     "ingredients_amount": [125,2/3,2,100],
-    "img": "https://cdn.tasteatlas.com/images/dishes/a2a4d36c2f294db28ff5e2c780b0bc75.jpg?mw=1300"
+    "img": "https://cdn.tasteatlas.com/images/dishes/a2a4d36c2f294db28ff5e2c780b0bc75.jpg?mw=1300",
+    recipe_instruction: ['Tôm rút chỉ đen',' rửa sạch',' thấm khô','Thịt ba chỉ xắt miếng mỏng','Hành',' tỏi băm nhỏ','Phi hành tỏi cho thật thơm','cho thịt vào đảo đều','Đợi thịt hết màu đỏ thì cho tôm vào đảo cùng thịt','Khi tôm chuyển sang màu đỏ và hơi săn lại thì cho nước mắm',' nước hàng',' đường','Đảo đều cho tôm và thịt'],
     },
     {
     "id": "20",
@@ -236,6 +248,7 @@ let recipes = [
     "type": "bf",
     "ingredients": [30,29,4,19,6,77,29],
     "ingredients_amount": [420,25,90,1,80,240,3],
-    "img": "https://i2.wp.com/www.eatthis.com/wp-content/uploads/2019/11/whole-grain-pancake-stack.jpg?fit=1200%2C879&ssl=1"
+    "img": "https://i2.wp.com/www.eatthis.com/wp-content/uploads/2019/11/whole-grain-pancake-stack.jpg?fit=1200%2C879&ssl=1",
+    recipe_instruction: ['Trộn bột làm bánh : Cho bột mì', 'bột nở',' đường và muối vào thố hoặc âu và trộn đều.', 'Để bột mịn bạn có thể dùng rây rây qua.',' Đây là công đoạn trộn bột khô nên bạn càng trộn kỹ',' trộn đều thì vị của bánh sẽ đều',' bánh cũng chín kỹ và ngon hơn.Tiếp tục đập trứng gà ra tô',' thêm dầu ăn vào rồi dùng phới lồng đánh đều. Sau đó cho sữa tuơi không đường vào và đánh cho hỗn hợp bông lên. Lúc này, bạn đổ từ từ hỗn hợp bột khô vào và tiếp tục vừa đổ vừa đánh đều cho tới khi bột mịn thì thôi.', 'Bước 2: Nướng bánh pancake bằng chảo nóng: Đặt chảo chống dính lên bếp cho nóng trên lửa nhỏ. Đặt khuôn bánh lên chảo và từ từ cho phần bột vào khuôn. Sau đó tăng lửa lên mức trung bình rồi nhấc khuôn ra khỏi chảo, dùng thìa hoặc đữa thử dịch chuyển bánh xem bánh đã cứng chưa, nếu bánh cứng thì lật và nướng mặt còn lại sao cho 2 mặt bánh chín vàng đều là được.','Bước 3: Trình bày và thưởng thức bánh kếp: Khi bánh đã chín vàng, bạn gắp bánh ra đĩa xếp chồng từ 2 – 3 chiếc bánh lên với nhau, sau đó rưới mật ong hoặc chocolate lên trên rồi dùng muỗng xắn từng phần bánh và thưởng thức.'],
     }
     ]

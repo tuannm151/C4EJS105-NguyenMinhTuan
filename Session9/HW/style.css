@@ -1,0 +1,38 @@
+.task3 {
+    border: 5px dotted rgb(154, 152, 152);
+    width: 90%;
+    height: 400px;
+    margin: auto;
+}
+
+#reload_btn {
+    cursor: pointer;
+    font-size: 17px;
+    width: 150px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    background: transparent;
+    display: inline;
+    float: right;
+    outline: white;
+}
+
+.fa-redo {
+    padding-right: 5px;
+}
+
+#quote {
+    text-align: right;
+    padding-top: 15%;
+    padding-right: 13%;
+}
+#quote_content {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+}
+#quote_author {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
