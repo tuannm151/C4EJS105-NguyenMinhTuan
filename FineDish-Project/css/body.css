@@ -119,6 +119,7 @@
     left: 0;
     right: 0;
     position: relative;
+    display: block;
 
 }
 .more-detail-title {

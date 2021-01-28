@@ -32,7 +32,7 @@
                 </div>
                 <div class="most-favorited-right-container">
                     <div class="most-favorited-right">
-                        <div class="most-favorited-right-con rank2">
+                        <div class="most-favorited-right-con rank2" >
                             
                                 <img src="img/recipes-images/ga-chien-nuoc-mam.jpg" alt="" id="rank2-img">
                            
@@ -113,8 +113,78 @@
                     <ol id='ol-instructions'></ol>
                 </div>
             </div>
-            <div class="admin-page">
-                
+        </div>
+        <div class="admin-page">
+            <div class="admin-page-title"><h1>Quản lí dữ liệu</h1></div>
+            <div class="property-add-bar">
+                <div class="new-item-info">
+                    <input type="text" placeholder="Enter id..." id="new-item-id">
+                </div>
+                <div class="new-item-info">
+                    <input type="text" placeholder="Enter name..." id="new-item-name">
+                </div>
+                <div class="new-item-info">
+                    <input type="text" placeholder="Nhập vào id các nguyên liệu" id="new-item-ingredients">
+                </div>
+                <div class="new-item-info">
+                    <input type="text" placeholder="Nhập vào số lượng các nguyên liệu" id="new-item-amount">
+                </div>
+                <div class="new-item-info">
+                    <input type="text" placeholder="Recipe img" id="new-item-img">
+                </div>
+                <div class="new-item-info-sel">
+                    <span>Danh mục</span>
+                    <select name="category" id="new-item-category">
+                        <option value="viet">Món Việt</option>
+                        <option value="foreign">Món ngoại</option>
+                        <option value="asia">Món Á</option>
+                    </select>
+                </div>
+                <div class="new-item-info-sel">
+                    <span class="category-title">Độ khó</span>
+                    <select name="difficult" id="new-item-difficult">
+                        <option value="hard">Khó</option>
+                        <option value="medium">Vừa</option>
+                        <option value="easy">Dễ</option>
+                    </select>
+                </div>
+                <div class="new-item-info-sel">
+                    <span class="category-title">Thời gian:</span>
+                    <select name="time" id="new-item-time">
+                        <option value="20">~20 min</option>
+                        <option value="30">~30 min</option>
+                        <option value="60">~60 min</option>
+                    </select>
+                </div>
+                <div class="new-item-info-sel">
+                    <span class="category-title">Loại món:</span>
+                <select name="type" id="new-item-type">
+                    <option value="main">Bữa chính</option>
+                    <option value="side">Bữa phụ</option>
+                    <option value="bf">Bữa sáng</option>
+                </select>
+                </div>
+                <div class="new-item-btn">
+                    <button id="new-item-add-btn">Add</button>
+                    <button id="new-item-clear-btn">Clear</button>
+                </div>
+            </div>
+            <div class="item-table">
+                <table>
+                    <thead>
+                       <th>ID</th>
+                       <th>Tên recipe</th>
+                       <th>Danh mục</th>   
+                       <th>Độ khó</th>
+                       <th>Thời gian</th>
+                       <th>Loại món</th>
+                       <th>Id nguyên liệu</th>
+                       <th>Số lượng nguyên liệu</th>
+                       <th>Actions</th>
+                    </thead>
+                    <tbody id="ts_body">
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

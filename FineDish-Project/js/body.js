@@ -87,14 +87,12 @@ function nextPage() {
     }
 }
 function showThisItem(clicked_id) {
-    console.log(clicked_id);
     showDetailItem(clicked_id);
 }
 showRecipes = (page) => {
     let btn_next = document.getElementById("btn_next");
     let btn_prev = document.getElementById("btn_prev");
-    let itemContainers = document.getElementsByClassName('content-item');
-    console.log(itemContainers); 
+    // let itemContainers = document.getElementsByClassName('content-item');
     item_container.innerHTML = '';
     for(let idx = (page-1)*recipes_per_page; idx < page*recipes_per_page && idx < searchedRecipes.length; idx++) { 
             item_container.insertAdjacentHTML('beforeend', `<div class="content-item" id="${searchedRecipes[idx].id}" onClick="showThisItem(this.id);">
@@ -146,7 +144,6 @@ function showDetailItem(itemID) {
             thisRecipeCategory = 'Món Việt';
             break;   
     }
-    console.log(thisRecipeIngredients);
     switch(thisRecipe[0].type) {
         case 'main':
             thisRecipeType = 'Bữa chính';
@@ -177,6 +174,110 @@ function showDetailItem(itemID) {
     }
 }
 showDetailItem(0);
+// admin page ---------- 
+let tbody = document.getElementById('ts_body');
+let listTr = tbody.getElementsByTagName("tr");
+let isUpdating = false;
+let elementIdx;
+addModifyFunction = (index) => {
+    let newElement = listTr[index].lastChild;
+    newElement.addEventListener('click', (e) => {
+        // project's index
+        elementIdx = e.target.parentNode.parentNode.rowIndex - 1;
+        if (e.target.innerHTML == 'X') {
+            // delete element in database
+            recipes.splice(elementIdx,1);
+            // delete element in html interface
+            e.target.parentNode.parentNode.remove();
+            // clearInput();
+        }
+        else if (e.target.innerHTML == 'U') {
+            isUpdating = true;
+            document.getElementById('new-item-id').value = recipes[elementIdx].id;
+            document.getElementById('new-item-name').value = recipes[elementIdx].name;
+            document.getElementById('new-item-ingredients').value = recipes[elementIdx].ingredients;
+            document.getElementById('new-item-amount').value = recipes[elementIdx].ingredients_amount;
+            document.getElementById('new-item-category').value = recipes[elementIdx].category;
+            document.getElementById('new-item-difficult').value = recipes[elementIdx].difficult;
+            document.getElementById('new-item-time').value = recipes[elementIdx].time;
+            document.getElementById('new-item-type').value = recipes[elementIdx].type;
+            document.getElementById('new-item-img').value = recipes[elementIdx].img;
+            document.getElementById('new-item-add-btn').innerHTML = 'Update';
+        }
+    });
+}
+for (let idx in recipes) {
+    tbody.insertAdjacentHTML('beforeend', `<tr><td>${recipes[idx].id}</td><td>${recipes[idx].name}</td><td>${recipes[idx].category}</td><td>${recipes[idx].difficult}</td><td>${recipes[idx].time}</td><td>${recipes[idx].type}</td><td>${recipes[idx].ingredients}</td><td>${recipes[idx].ingredients_amount}</td><td><button>X</button><button>U</button></td></tr>`);
+    addModifyFunction(idx);
+}
+clearInput = () => {
+    document.getElementById('new-item-add-btn').innerHTML = 'Add'
+    document.getElementById('new-item-id').value = null;
+    document.getElementById('new-item-name').value = null;
+    document.getElementById('new-item-ingredients').value = null;
+    document.getElementById('new-item-amount').value = null;
+    document.getElementById('new-item-img').value = null;
+    isUpdating = false;
+}
+//fuction add new item to html and database 
+addNewRecipe = (id, name, category, difficult, time, type, ingredients, ingredients_amount) => {
+    let newRecipe = {}
+    newRecipe.id = id;
+    newRecipe.name = name;
+    newRecipe.category = category;
+    newRecipe.difficult = difficult;
+    newRecipe.time = time;
+    newRecipe.type = type;
+    newRecipe.ingredients = ingredients;
+    newRecipe.ingredients_amount = ingredients_amount;
+    recipes.push(newRecipe);
+    tbody.insertAdjacentHTML('beforeend', `<tr><td>${id}</td><td>${name}</td><td>${category}</td><td>${difficult}</td><td>${time}</td><td>${type}</td><td>${ingredients}</td><td>${ingredients_amount}</td><td><button>X</button><button>U</button></td></tr>`);
+    addModifyFunction(listTr.length - 1);
+}
+document.getElementById('new-item-add-btn').addEventListener('click', () => {
+    let newRecipeId = document.getElementById('new-item-id').value;
+    let newRecipeName = document.getElementById('new-item-name').value;
+    let newRecipeDifficult = document.getElementById('new-item-difficult').value;
+    let newRecipeCategory = document.getElementById('new-item-category').value;
+    let newRecipeTime = document.getElementById('new-item-time').value;
+    let newRecipeType = document.getElementById('new-item-type').value;
+    let newRecipeIngredients = document.getElementById('new-item-ingredients').value.split(" ");
+    let newRecipeAmount = document.getElementById('new-item-amount').value.split(" ");
+    let newRecipeImage = document.getElementById('new-item-img').value;
+    if (isUpdating == false) {
+        addNewRecipe(newRecipeId, newRecipeName, newRecipeCategory, newRecipeDifficult, newRecipeTime, newRecipeType, newRecipeIngredients, newRecipeAmount);
+        // reset input on html interface
+        clearInput();
+    } else {
+        // update html interface
+        let listTd = listTr[elementIdx].getElementsByTagName('td');
+        listTd[0].innerHTML = newRecipeId;
+        listTd[1].innerHTML = newRecipeName;
+        listTd[2].innerHTML = newRecipeCategory;
+        listTd[3].innerHTML = newRecipeDifficult;
+        listTd[4].innerHTML = newRecipeTime;
+        listTd[5].innerHTML = newRecipeType;
+        listTd[6].innerHTML = newRecipeIngredients;
+        listTd[7].innerHTML = newRecipeAmount;
+        // update database
+        recipes[elementIdx].id = newRecipeId;
+        recipes[elementIdx].name = newRecipeName;
+        recipes[elementIdx].ingredients = newRecipeIngredients;
+        recipes[elementIdx].ingredients_amount = newRecipeAmount;
+        recipes[elementIdx].category = newRecipeCategory;
+        recipes[elementIdx].difficult = newRecipeDifficult;
+        recipes[elementIdx].time = newRecipeTime;
+        recipes[elementIdx].type = newRecipeType;
+        recipes[elementIdx].img = newRecipeImage;
+        // clear
+        clearInput();
+    }
+    showRecipes(currentPage);
+});
+// clear button
+document.getElementById('new-item-clear-btn').addEventListener('click', () => {
+    clearInput();
+});
 
 
 

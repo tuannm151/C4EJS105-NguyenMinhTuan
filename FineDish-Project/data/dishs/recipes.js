@@ -388,6 +388,7 @@ let recipes = [
             20,
             20,
             50,
+            30,
             30
         ],
         "img": "https://i.ytimg.com/vi/BXYsWrPVZfQ/maxresdefault.jpg",
