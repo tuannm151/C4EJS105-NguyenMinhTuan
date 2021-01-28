@@ -1,4 +1,4 @@
-let ingredient = [
+let ingredients = [
     {
     "id": "0",
     "ingredient": "Tỏi",

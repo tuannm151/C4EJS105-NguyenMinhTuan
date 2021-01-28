@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body</title>
+    <link rel="stylesheet" href="css/body.css">
+    <script src="https://kit.fontawesome.com/193000bb3b.js" crossorigin="anonymous"></script>
+    <script src="data/dishs/recipes.js"></script>
+    <script src="data/dishs/ingrediens.js"></script>
+    <script src="data/dishs/recipesFavorite.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="most-favorited-container">
+            <div class="most-favorited-header">
+                <span id="most-favorited-title">Most favorited</span>
+            </div>
+            <div class="most-favorited-body">
+                <div class="most-favorited-left">
+                    
+                        <img src="img/recipes-images/ga-chien-nuoc-mam.jpg" alt="" id="rank1-img">
+                    
+                    <div class="most-favorited-detail">
+                        <div class="most-favorited-category" ><span id="rank1-category">Món Việt</span> <span id="rank1-type">Bữa chính</span></div>
+                        <div class="most-favorited-amount"><i class="fab fa-gratipay"></i>
+                            <span id="rank1-amount">523</span></div>
+                            <div class="most-favorited-title" id="rank1-name">Gà chiên nước mắm</div>
+                    </div>
+                </div>
+                <div class="most-favorited-right-container">
+                    <div class="most-favorited-right">
+                        <div class="most-favorited-right-con rank2">
+                            
+                                <img src="img/recipes-images/ga-chien-nuoc-mam.jpg" alt="" id="rank2-img">
+                           
+                            <div class="most-favorited-detail">
+                                
+                                <div class="most-favorited-title" id="rank2-name">Gà chiên nước mắm</div>
+                                <div class="most-favorited-amount"><i class="fab fa-gratipay"></i>
+                                    <span id="rank2-amount">42</span></div>
+                            </div>
+                        </div>
+                        <div class="most-favorited-right-con rank3">
+                            <div class="most-favorited-img">
+                                <img src="img/recipes-images/ga-chien-nuoc-mam.jpg" alt="" id="rank3-img">
+                            </div>
+                            <div class="most-favorited-detail">
+                                <div class="most-favorited-title" id="rank3-name">Gà chiên nước mắm</div>
+                                <div class="most-favorited-amount"><i class="fab fa-gratipay"></i><span
+                                         id="rank3-amount">32</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="most-favorited-right"></div>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="main-content-filter">
+                
+                <div class="search-bar"><input type="text" name="seach" id="search-bar" placeholder="Tìm kiếm món ăn..."></div>
+                <div class="filters-bar">
+                    <span class="category-title">Danh mục:</span>
+                    <select name="category" id="category-select">
+                        <option value="all">Tất cả</option>
+                        <option value="viet">Món Việt</option>
+                        <option value="foreign">Món ngoại</option>
+                        <option value="asia">Món Á</option>
+                    </select>
+                    <span class="category-title">Độ khó:</span>
+                    <select name="difficult" id="difficult-select">
+                        <option value="all">Tất cả</option>
+                        <option value="hard">Khó</option>
+                        <option value="medium">Vừa</option>
+                        <option value="easy">Dễ</option>
+                    </select>
+                    <span class="category-title">Thời gian:</span>
+                    <select name="time" id="time-select">
+                        <option value="all">Tất cả</option>
+                        <option value="20">~20 min</option>
+                        <option value="30">~30 min</option>
+                        <option value="60">~60 min</option>
+                    </select>
+                    <span class="category-title">Loại món:</span>
+                    <select name="type" id="type-select">
+                        <option value="all">Tất cả</option>
+                        <option value="main">Bữa chính</option>
+                        <option value="side">Bữa phụ</option>
+                        <option value="bf">Bữa sáng</option>
+                    </select>
+                </div>
+
+        </div>
+            <div class="main-show-content" id="item-container">
+                
+            </div>
+            <div class="pagination-button"><button id="btn_prev" onclick="prevPage()">Prev</button><button id="btn_next" onclick="nextPage()">Next</button></div>
+        </div>
+        <div class="main-more-detail"> 
+            <div class="more-detail-title"></div>
+            <div class="more-detail-category"></div>
+            <div class="more-detail-img"><img src="img/recipes-images/ga-chien-nuoc-mam.jpg" alt="" id="more-detail-img"></div>
+            <div class="more-detail-container">
+                <div class="more-detail-ingredients-container">
+                    <div class="more-detail-ingredients-title">Ingredients</div>
+                    <div class="more-detail-ingredients-content"><ul id="ul-ingredients"></ul>
+                    </div>
+                </div>
+                <div class="more-detail-instructions">
+                    <ol id='ol-instructions'></ol>
+                </div>
+            </div>
+            <div class="admin-page">
+                
+            </div>
+        </div>
+    </div>
+    <script src="js/body.js"></script>
+    <script src="js/bodyController.js"></script>
+</body>
+
+</html>
