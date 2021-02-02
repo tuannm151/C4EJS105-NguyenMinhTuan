@@ -1,0 +1,440 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Bree+Serif&display=swap");
+
+.container-user * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body .container-user {
+  background: #333;
+  overflow-x: hidden;
+  padding-top: 1px;
+  font-family: "Poppins", sans-serif;
+  margin: 0 1px;
+}
+/* ======================== MAIN BODY USER ========================*/
+.main-bd {
+  width: 100%;
+  display: flex;
+  padding-right: 15px;
+}
+/* ======================== PROFILE HEADER ========================*/
+.profile-header {
+  background: #222;
+  width: 100%;
+  display: flex;
+  height: 190px;
+  position: relative;
+  box-shadow: 0px 3px 4px black;
+}
+.profile-header h3{
+  color: #fff;
+  font-family: "Lobster", cursive !important;
+  font-weight: lighter;
+  font-size: 43px !important;
+}
+.bio{
+  text-indent: 25px;
+}
+/* IMG */
+.profile-img {
+  float: left;
+  width: 340px;
+  height: 200px;
+}
+
+.profile-img img {
+  border-radius: 50%;
+  height: 230px;
+  width: 230px;
+  border: 5px solid #fff;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 50px;
+  top: 20px;
+  z-index: 5;
+  background: #fff;
+}
+/*====================== MENU USER IMG ====================== */
+#profile-img{
+  height: 50px !important;
+  width: 50px !important;
+  
+} 
+#profile-img img{
+  height: 50px !important;
+  width: 50px !important;
+  position: relative;
+  left: -50px !important;
+  top: 0px !important;
+  vertical-align: middle;
+  /* transform: translateY(-50%); */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  outline: none;
+}
+/* ======================== PROFILE SIDE ========================*/
+/* ======================== PROFILE SIDE ========================*/
+.profile-side {
+  width: 300px;
+  background: #222;
+  box-shadow: 0px 3px 5px black;
+  padding: 90px 30px 20px;
+  font-family: "Bree Serif", serif;
+  margin-left: 10px;
+  z-index: 99;
+}
+
+.profile-side p {
+  margin-bottom: 7px;
+  color: rgb(207, 206, 206);
+  font-size: 14px;
+}
+
+.profile-side p i {
+  color: #e40046;
+  margin-right: 10px;
+}
+
+.mobile-no i {
+  transform: rotateY(180deg);
+  color: #e40046;
+}
+
+.profile-btn {
+  display: flex;
+}
+/*  */
+.profile-nav-info {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 60px;
+}
+
+.profile-nav-info h3 {
+  font-variant: small-caps;
+  font-size: 2rem;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.profile-nav-info .address {
+  display: flex;
+  font-weight: bold;
+  color: #777;
+}
+
+.profile-nav-info, .address p {
+  margin-right: 5px;
+}
+/* ======================== PROFILE OPTION ========================*/
+.profile-option{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  outline: none;
+  background: #e40046;
+}
+/*  */
+.profile-option:hover {
+  background: #fff;
+  border: 1px solid #e40046;
+}
+.profile-option:hover .notification i {
+  color: #e40046;
+}
+
+.profile-option:hover span {
+  background: #e40046;
+}
+/*  */
+.profile-option .notification i {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.profile-option .notification span{
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #fff;
+  color: #e40046;
+  border: 1px solid #e40046;
+  padding: 5px;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+/* ======================== CREATE BUTTON ========================*/
+
+button.createbtn {
+  border: 0;
+  padding: 10px;
+  width: 100%;
+  border-radius: 3px;
+  background: #e40046;
+  color: #fff;
+  font-family: "Bree Serif";
+  font-size: 1rem;
+  margin: 5px 2px;
+  cursor: pointer;
+  outline: none;
+  margin-bottom: 10px;
+  transition: background 0.3s ease-in-out;
+  box-shadow: 0px 5px 7px 0px black;
+}
+
+ button.createbtn:hover {
+  background: #a79bb6;
+}
+
+ button.createbtn i {
+  margin-right: 5px;
+}
+
+/* ======================== PROFILE BODY ========================*/
+.profile-body {
+  width: 100%;
+  z-index: -1;
+}
+
+/*  */
+@media (max-width: 1100px) {
+  .profile-side {
+    width: 250px;
+    padding: 90px 15px 20px;
+  }
+
+  .profile-img img {
+    height: 200px;
+    width: 200px;
+    left: 50px;
+    top: 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  body .container-user{
+    margin: 0 20px;
+  }
+
+  .profile-header {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .profile-img {
+    float: left;
+    width: 100%;
+    height: 200px;
+  }
+
+  .profile-img img {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    left: 0px;
+  }
+
+  .profile-nav-info {
+    text-align: center;
+  }
+
+  .profile-option {
+    right: 20px;
+    top: 75%;
+    transform: translateY(50%);
+  }
+
+  .main-bd {
+    flex-direction: column;
+    padding-right: 0;
+  }
+
+  .profile-side {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    margin: 5px 0;
+  }
+
+  .profile-nav-info .address {
+    justify-content: center;
+  }
+
+  .user-rating {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 400px) {
+  body .container-user{
+    margin: 0;
+  }
+
+  .profile-header h3 {
+      display: block;
+  }
+
+  .profile-option {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 15px;
+    top: 83%;
+  }
+
+  .profile-option .notification .alert-message {
+    top: -3px;
+    right: -4px;
+    padding: 4px;
+    height: 15px;
+    width: 15px;
+    font-size: 0.7rem;
+  }
+}
+
+/* ======================== Activities TabBlock ========================*/
+.group::after, .tabBlock-tabs::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.container-user ::before, ::after {
+  box-sizing: border-box;
+}
+
+body .right-side{
+  color: #222;
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  line-height: 1.5;
+  max-width: 50rem;
+  height: 100%;
+  padding: 2px;
+}
+/*  */
+@media screen and (min-width: 700px) {
+  body .right-side {
+    font-size: 137.5%;
+  }
+}
+/*  */
+.right-side p, ol, ul {
+  margin-bottom: 1.25rem;
+  margin-top: 0;
+}
+
+.right-side ol, ul {
+  padding: 0;
+  margin-left: 1.25rem;
+}
+
+.unstyledList, .tabBlock-tabs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tabBlock {
+  margin: 0 0 2.5rem;
+}
+
+.tabBlock-tab {
+  background-color:#333;
+  border-color: #333;
+  border-left-style: solid;
+  border-top: solid;
+  border-width: 2px;
+  color: #b5a8c5;
+  box-shadow: 0px 3px 5px #222;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  float: left;
+  padding: 0.625rem 1.25rem;
+  position: relative;
+  -webkit-transition: 0.1s ease-in-out;
+          transition: 0.1s ease-in-out;
+}
+.tabBlock-tab:last-of-type {
+  border-right-style: solid;
+}
+.tabBlock-tab::before, .tabBlock-tab::after {
+  content: "";
+  display: block;
+  height: 4px;
+  position: absolute;
+  -webkit-transition: 0.1s ease-in-out;
+          transition: 0.1s ease-in-out;
+}
+.tabBlock-tab::before {
+  background-color: #b5a8c5;
+  left: -2px;
+  right: -2px;
+  top: -2px;
+}
+.tabBlock-tab::after {
+  background-color: transparent;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+}
+/*  */
+/* @media screen and (min-width: 700px) {
+  .tabBlock-tab {
+    width: fit-content;
+  }
+} */
+/*  */
+.tabBlock-tab.is-active {
+  position: relative;
+  color: #fff;
+  text-shadow: 2px 2px 5px #777;
+  z-index: 1;
+}
+.tabBlock-tab.is-active::before {
+  background-color: #975997;
+}
+.tabBlock-tab.is-active::after {
+  background-color: #fff;
+}
+
+.tabBlock-pane{
+  padding: 0 15px;
+}
+.tabBlock-content {
+  background-color: #333;
+  border: 2px solid #333;
+  padding: 1.25rem;
+  text-indent: 10px;
+  color: white;
+  box-shadow: 0px 3px 5px black;
+}
+.tabBlock-pane > :last-child {
+  margin-bottom: 0;
+}
+

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Fine Dish</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="user.css">
+    <link rel='stylesheet' media='screen' href='main.css'>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/193000bb3b.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500;700&family=Lobster&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<!-- HEADER -->
+<header>
+    <div class="header-menu-position">
+        <nav class="left-menu"> 
+          <a href="index.html" title="HOME"><img src="images/logo.jpg" alt=""></a>
+          <a href="index.html" title="HOME"><i class="fa fa-fw fa-home"></i> Home</a>
+          <a href="#">VietNamese</a>
+          <a href="randomdish.html" title="Get a random Meal.">Hungry?</a>
+          <a href="#" title="#About Us">About Us</a>
+        </nav>
+
+        <nav class="left-menu-hamburger" >
+          <button href="#" title="MENU" class="icon" onclick="dropDownMenu()"><a>☰</a></button>       
+          <ul id="drop-down-content" class="drop-down-content">
+            <li><a href="index.html" title="HOME"><img src="images/logo.jpg" alt=""></a></li>
+              <li><a href="index.html" title="HOME"><i class="fa fa-fw fa-home"></i> Home</a></li>
+              <li><a href="#">VietNamese</a></li>
+              <li><a href="randomdish.html" title="Get a random Meal.">Hungry?</a></li>
+              <li><a href="#" title="#About Us">About Us</a></li>
+          </ul>
+        </nav>
+
+        <div class="right-menu">
+          <button href="#" id="sign-in" class="sign-in"><a> Sign in</a></button>
+          <button href="#" id="sign-up" class="sign-up"><a> Sign up</a></button>
+          <a style="font-size: 25px; margin: 0 !important;"> | </a>
+					<a href="#"><i class="fa fa-facebook-official" aria-hidden="true" style="color: blue;"></i></a>
+					<a href="#"><i class="fa fa-instagram" aria-hidden="true" style="color: deeppink;"></i></a>
+					<a href="#"><i class="fa fa-pinterest" aria-hidden="true" style="color: red;"></i></a>
+					<a href="#"><i class="fa fa-twitter" aria-hidden="true" style="color: aqua;"></i></i></a>
+        </div>
+    </div>
+
+  <script>
+  /* When the user clicks on the button, 
+   toggle between hiding and showing the dropdown content */
+   function dropDownMenu() {
+    var x = document.getElementById("drop-down-content");
+      if (x.style.display === "block") {
+          x.style.display = "none";
+      } else {
+          x.style.display = "block";
+      }
+   }
+  </script>
+</header>
+
+<div> <h2 align = "center" style="width: 75%; font-size: 30px;"> - Dish we offer - </h2> </div>
+<!-- FILTER AND SEARCH -->
+<div class="main-content-filter">
+                
+  <div class="search-bar"><input type="text" name="seach" id="search-bar" placeholder="Tìm kiếm món ăn..."></div>
+  <div class="filters-bar">
+      <div class="filter-bar-child">
+        <span class="category-title">Danh mục:</span>
+        <select name="category" id="category-select">
+            <option value="all">Tất cả</option>
+            <option value="viet">Món Việt</option>
+            <option value="foreign">Món ngoại</option>
+            <option value="asia">Món Á</option>
+        </select>
+      </div>
+      <div class="filter-bar-child">
+        <span class="category-title">Độ khó:</span>
+        <select name="difficult" id="difficult-select">
+            <option value="all">Tất cả</option>
+            <option value="hard">Khó</option>
+            <option value="medium">Vừa</option>
+            <option value="easy">Dễ</option>
+        </select>
+      </div>
+      <div class="filter-bar-child">
+        <span class="category-title">Thời gian:</span>
+        <select name="time" id="time-select">
+            <option value="all">Tất cả</option>
+            <option value="20">~20 min</option>
+            <option value="30">~30 min</option>
+            <option value="60">~60 min</option>
+        </select>
+      </div>
+      <div class="filter-bar-child">
+        <span class="category-title">Loại món:</span>
+        <select name="type" id="type-select">
+            <option value="all">Tất cả</option>
+            <option value="main">Bữa chính</option>
+            <option value="side">Bữa phụ</option>
+            <option value="bf">Bữa sáng</option>
+        </select>
+      </div>
+      
+  </div>
+
+</div>   
+<div class="pagination-button"><button id="btn_prev" onclick="prevPage()">&#8249;</button><button id="btn_next" onclick="nextPage()">&#8250;</button></div>
+        </div>
+<div class="grid" id="item-container">
+
+      
+    </div>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script> 
+    <script src="data/dishs/recipes.js"></script>
+    <script src="js/body.js"></script>
+    <script src="js/bodyController.js"></script>
+    <script src='main.js'></script>
+</body>
+</html>
