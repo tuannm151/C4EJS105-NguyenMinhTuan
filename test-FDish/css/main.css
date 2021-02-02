@@ -62,11 +62,12 @@ nav.left-menu {
 }
 .drop-down-content {
   text-align: center;
+  width: 30%;
 }
 .left-menu-hamburger #drop-down-content{
   display: none;
   position: fixed;
-   top: 70px;
+   top: 65px;
    left: 5px;
 }
 .left-menu-hamburger li{
@@ -78,7 +79,7 @@ nav.left-menu {
 
 .left-menu-hamburger a{
   display: none;
-  font-size: 27px;
+  font-size: 23px;
 }
 
 .left-menu-hamburger li:last-child{
