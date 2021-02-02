@@ -62,7 +62,8 @@ nav.left-menu {
 }
 .drop-down-content {
   text-align: center;
-  width: 30%;
+  width: 35%;
+  padding: 10px;
 }
 .left-menu-hamburger #drop-down-content{
   display: none;
@@ -103,6 +104,7 @@ nav.left-menu {
   border-radius: 8px;
   cursor: pointer;
   border: none;
+  outline: none;
 }
 .sign-in{
   background-color: red;
@@ -115,19 +117,19 @@ nav.left-menu {
   text-decoration: none;
   color: #787878;
   align-self: center;
-
-  font-family: "Lobster", cursive;
+  font-family: cursive;
   font-weight: lighter;
   text-decoration: none;
   text-transform: initial;
   font-size: 20px;
 }
 
+
 .right-menu a:hover,
 .links-icons a:hover,
 .left-menu a:hover  {
   color: #a8bff0;
-  text-shadow: 0 0 15px #ffffff;
+  text-shadow: 5px 5px 20px #ffe8e8;
 }
 
 
@@ -257,11 +259,18 @@ i{
     padding: 1px !important;
     margin: 0 1px !important;
   }
+  .right-menu a {
+    font-size: 18px;
+    padding: 4px;
+  }
   .left-menu-hamburger button{
     display: block;
 }
 }
   /* prev and next button */
+  .btn-bottom {
+    display: none;
+  }
   .pagination-button {
     margin: 10px auto;
     width: 120px;
@@ -284,6 +293,7 @@ i{
     width: 50%;
     margin-left: 15px;
     bottom: 10px;
+    margin-top: 7px;
   }
   .search-bar i {
     font-size: 30px;
@@ -364,6 +374,10 @@ select:focus {
 
 
   @media screen and (max-width: 800px) {
+
+    .filter-bar-child {
+      width: 40%;
+    }
     .search-bar{
       position: static;
     }

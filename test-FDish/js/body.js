@@ -47,18 +47,18 @@ numPages= () => {
     return Math.ceil(searchedRecipes.length / recipes_per_page);
 }
 
+
 function prevPage() {
     if(currentPage > 1) {
         currentPage--;
         showRecipes(currentPage);
-        
     }
 }
+
 function nextPage() {
     if(currentPage < numPages()) {
         currentPage++;
         showRecipes(currentPage);
-    
     }
 }
 function showThisItem(clicked_id) {
@@ -78,8 +78,7 @@ showRecipes = (page) => {
                   </div>
                   <img class="photothumb" src="${searchedRecipes[idx].img}">
                   <div class="desc">
-                    <p> <i>Tôm rang thịt ba chỉ (cháy cạnh)</i>
-                      Thịt ba chỉ mềm xen lẫn mỡ giòn giòn, trong khi thịt tôm chắc, thơm mùi hành tỏi phi, thêm nước sốt sền sệt, mằn mặn, ngòn ngọt. Thêm bát cơm trắng với ít dưa chua hay cà muối thì còn gì bằng.</p>
+                    <p> ${searchedRecipes[idx].description}</p>
                   </div>
                 </div>
               </div>`);       
