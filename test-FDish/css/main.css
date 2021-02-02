@@ -279,8 +279,10 @@ i{
   }
   /* FILTER AND SEARCH */
   .search-bar{
+    position: relative;
     width: 50%;
-    margin-left: 5px;
+    margin-left: 15px;
+    bottom: 10px;
   }
   .search-bar i {
     font-size: 30px;
@@ -294,7 +296,7 @@ i{
     padding: 10px;
   }
   input[type=text] {
-    width: 58%;
+    width: 30%;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
@@ -361,11 +363,18 @@ select:focus {
 
 
   @media screen and (max-width: 800px) {
+    .search-bar{
+      position: static;
+    }
+    input[type=text] {
+      width: 85%;
+      margin-bottom: 5px;
+    }
     .search-bar, .filters-bar {
       display: block;
     }
     input[type=text]:focus {
-      width: 120%;
+      width: 135%;
     }
     .filter-bar-child span, .filter-bar-child select {
       display: block;
