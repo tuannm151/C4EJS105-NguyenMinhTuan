@@ -69,3 +69,4 @@ searchBar.addEventListener('keyup', (e) => {
 });
 
 
+

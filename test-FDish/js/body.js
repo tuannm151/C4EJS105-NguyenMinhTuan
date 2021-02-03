@@ -71,7 +71,7 @@ showRecipes = (page) => {
         // let itemContainers = document.getElementsByClassName('content-item');
         item_container.innerHTML = '';
         for(let idx = (page-1)*recipes_per_page; idx < page*recipes_per_page && idx < searchedRecipes.length; idx++) { 
-                item_container.insertAdjacentHTML('beforeend', `<div class="item photo">
+                item_container.insertAdjacentHTML('beforeend', `<div class="item photo" id="${searchedRecipes[idx].id}" onClick="showDetailItem(this.id);">
                 <div class="content">
                   <div class="title">
                     <h3> ${searchedRecipes[idx].name}</h3>
@@ -106,58 +106,67 @@ function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-// function showDetailItem(itemID) {
-//     let recipeCategory = document.getElementsByClassName('more-detail-category');
-//     let thisRecipe = recipes.filter((recipe) => Number(recipe.id) == itemID);
-//     let thisRecipeIngredients = [];
-//     for(let idx in thisRecipe[0].ingredients_amount) {
-//         let thisIngredient = ingredients.filter((ingredient) => ingredient.id == thisRecipe[0].ingredients[idx]);
-//         thisRecipeIngredients.push(thisIngredient[0]);
-//     } 
-//     document.getElementsByClassName('more-detail-title')[0].innerHTML = thisRecipe[0].name;
-//     let thisRecipeCategory;
-//     let thisRecipeType
-//     switch(thisRecipe[0].category) {
-//         case 'asia':
-//             thisRecipeCategory = 'Món Á';
-//             break;
-//         case 'foreign':
-//             thisRecipeCategory = 'Món ngoại';
-//             break;
-//         case 'viet':
-//             thisRecipeCategory = 'Món Việt';
-//             break;   
-//     }
-//     switch(thisRecipe[0].type) {
-//         case 'main':
-//             thisRecipeType = 'Bữa chính';
-//             break;
-//         case 'side':
-//             thisRecipeType = 'Bữa phụ';
-//             break;
-//         case 'bf':
-//             thisRecipeType = 'Bữa sáng';
-//             break;
-//     }
-//     let allCategory = `<span><i class="fas fa-globe-asia"></i>${thisRecipeCategory}</span> <span><i class="fas fa-egg"></i>Độ khó: ${capitalizeFirstLetter(thisRecipe[0].difficult)}</span> <span><i class="fas fa-stopwatch"></i>Thời gian: ${thisRecipe[0].time} min</span> <span><i class="fas fa-utensils"></i>Loại: ${thisRecipeType}</span>`;
-//     recipeCategory[0].innerHTML = allCategory;
-//     document.getElementById('more-detail-img').src = thisRecipe[0].img;
-//     let ingredientsList = document.getElementById('ul-ingredients');
-//     ingredientsList.innerHTML = '';
-//     for(let idx in thisRecipe[0].ingredients) {
-//         ingredientsList.insertAdjacentHTML('beforeend',
-//         `<li>${thisRecipe[0].ingredients_amount[idx]} ${thisRecipeIngredients[idx]['measurement']} ${thisRecipeIngredients[idx].ingredient}</li>`
-//         )
-//     }
-//     let instructionsList = document.getElementById('ol-instructions');
-//     instructionsList.innerHTML = '';
-//     for(let ins of thisRecipe[0].recipe_instruction) {
-//         instructionsList.insertAdjacentHTML('beforeend', 
-//         `<li>${ins}</li>`
-//         )
-//     }
-// }
-// showDetailItem(0);
+function showDetailItem(itemID) {
+    let recipeCategory = document.getElementsByClassName('more-detail-category');
+    let thisRecipe = recipes.filter((recipe) => Number(recipe.id) == itemID);
+    let thisRecipeIngredients = [];
+    for(let idx in thisRecipe[0].ingredients_amount) {
+        let thisIngredient = ingredients.filter((ingredient) => ingredient.id == thisRecipe[0].ingredients[idx]);
+        thisRecipeIngredients.push(thisIngredient[0]);
+    } 
+    document.getElementsByClassName('more-detail-title')[0].innerHTML = thisRecipe[0].name;
+    let thisRecipeCategory;
+    let thisRecipeType
+    switch(thisRecipe[0].category) {
+        case 'asia':
+            thisRecipeCategory = 'Món Á';
+            break;
+        case 'foreign':
+            thisRecipeCategory = 'Món ngoại';
+            break;
+        case 'viet':
+            thisRecipeCategory = 'Món Việt';
+            break;   
+    }
+    switch(thisRecipe[0].type) {
+        case 'main':
+            thisRecipeType = 'Bữa chính';
+            break;
+        case 'side':
+            thisRecipeType = 'Bữa phụ';
+            break;
+        case 'bf':
+            thisRecipeType = 'Bữa sáng';
+            break;
+    }
+    let allCategory = `<span>🌏 ${thisRecipeCategory}</span> <span>✅ Độ khó: ${capitalizeFirstLetter(thisRecipe[0].difficult)}</span> <span>🕗 </i>Thời gian: ${thisRecipe[0].time} min</span> <span>🍴 Loại: ${thisRecipeType}</span>`;
+    recipeCategory[0].innerHTML = allCategory;
+    document.getElementById('more-detail-img-big').src = thisRecipe[0].img;
+    document.getElementById('more-detail-img-small').src = thisRecipe[0].img;
+    document.getElementsByClassName('more-detail-desc')[0].innerHTML = `<p>${thisRecipe[0].description}</p>`;
+    let ingredientsList = document.getElementById('ul-ingredients');
+    ingredientsList.innerHTML = '';
+    for(let idx in thisRecipe[0].ingredients) {
+        ingredientsList.insertAdjacentHTML('beforeend',
+        `<li>${thisRecipe[0].ingredients_amount[idx]} ${thisRecipeIngredients[idx]['measurement']} ${thisRecipeIngredients[idx].ingredient}</li>`
+        )
+    }
+    let instructionsList = document.getElementById('ol-instructions');
+    instructionsList.innerHTML = '';
+    for(let ins of thisRecipe[0].recipe_instruction) {
+        instructionsList.insertAdjacentHTML('beforeend', 
+        `<li>${ins}</li>`
+        )
+    }
+    document.body.style.position = 'fixed';
+    document.getElementById("myBlog").style.display = "block";
+}
+// btn close detail item div
+function closeForm() {
+    document.getElementById("myBlog").style.display = "none";
+    document.body.style.position = 'static';
+}
+showDetailItem(0);
 // // admin page ---------- 
 // let tbody = document.getElementById('ts_body');
 // let listTr = tbody.getElementsByTagName("tr");
