@@ -67,6 +67,8 @@ const searchBar = document.getElementById('search-bar');
 searchBar.addEventListener('keyup', (e) => {
     currentSearchFilter();
 });
-
+// window.addEventListener('scroll', () => {
+//     console.log(window.pageYOffset);
+// })
 
 

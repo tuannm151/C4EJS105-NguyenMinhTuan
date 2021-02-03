@@ -42,6 +42,7 @@ let recipes_per_page = 6;
 let currentPage = 1;
 let filteredRecipes = recipes;
 let searchedRecipes = recipes;
+let yOffset;
 
 numPages= () => {
     return Math.ceil(searchedRecipes.length / recipes_per_page);
@@ -105,7 +106,6 @@ showRecipes(currentPage);
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
-
 function showDetailItem(itemID) {
     let recipeCategory = document.getElementsByClassName('more-detail-category');
     let thisRecipe = recipes.filter((recipe) => Number(recipe.id) == itemID);
@@ -158,13 +158,17 @@ function showDetailItem(itemID) {
         `<li>${ins}</li>`
         )
     }
-    document.body.style.position = 'fixed';
+    // get current yOffset
+    yOffset = window.pageYOffset;
+    document.getElementsByClassName('grid')[0].style.position = 'fixed';
     document.getElementById("myBlog").style.display = "block";
 }
 // btn close detail item div
 function closeForm() {
     document.getElementById("myBlog").style.display = "none";
-    document.body.style.position = 'static';
+    document.getElementsByClassName('grid')[0].style.position = 'static';
+    console.log(yOffset);
+    window.scroll(0,yOffset);
 }
 showDetailItem(0);
 // // admin page ---------- 

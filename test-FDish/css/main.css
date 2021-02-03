@@ -261,6 +261,9 @@ i{
 }
 
 @media screen and (max-width: 800px) {
+  .item {
+    margin: 2px 2px;
+  }
   nav.left-menu {
       display: none;
   }
@@ -483,7 +486,6 @@ select:focus {
 }
 .more-detail-img img{
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
-
 }
 .more-detail-ingredients-content li{
   min-height: 50px;
@@ -553,8 +555,32 @@ select:focus {
   justify-content: flex-end;
   align-items: baseline;
 }
+.more-detail-ingredients-title {
+    margin: 10px 0 20px 0;
+    text-align: center;
+}
+#ul-ingredients {
+  margin-left: 20px;
+}
+
 /*========================  ========================*/
 @media screen and (max-width: 800px) {
+  .more-detail-ingredients-title {
+    text-align: left;
+}
+  .more-detail-ingredients-container {
+    margin-left: 0%;
+  }
+  .more-detail-img-big {
+    text-align: center;
+  }
+  .more-detail-img-small {
+    display: none;
+  }
+  .form-container{
+    width: 85%;
+    height: 95%;
+  }
   .site-intro{
     display: none;
   }
