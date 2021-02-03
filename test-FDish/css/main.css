@@ -62,8 +62,8 @@ nav.left-menu {
 }
 .drop-down-content {
   text-align: center;
-  width: 35%;
-  padding: 10px;
+  width: 40%;
+  padding: 5px;
 }
 .left-menu-hamburger #drop-down-content{
   display: none;
@@ -74,8 +74,9 @@ nav.left-menu {
 .left-menu-hamburger li{
   display: none;
   box-sizing: border-box;
-  padding: 5px 10px;
+  padding: 5px 5px;
   background-color: #374046;
+
 }
 
 .left-menu-hamburger a{
@@ -271,6 +272,7 @@ i{
   .left-menu-hamburger ,.left-menu-hamburger li{
     position: relative;
     display: block;
+    z-index: 5002;
   }
 
   .left-menu-hamburger a{
