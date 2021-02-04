@@ -322,12 +322,11 @@ i{
     display: inline-block;
   }
   #clear-search-btn {
-    float: right;
     width: 27px;
     height: 27px;
-    position: relative;
-    right: 41%;
-    top: 5px;
+    position: absolute;
+    right: 70.7%;
+    bottom: 5px;
     outline: none;
     border-radius: 50%;
     background-color: rgb(160, 160, 160);
@@ -336,6 +335,9 @@ i{
     text-align: center;
     padding: 3px;
     display: none;
+    z-index: 5002;
+    -webkit-transition: right 0.4s ease-in-out;
+    transition: right 0.4s ease-in-out;
   }
   #clear-search-btn:hover {
     background-color: rgb(124, 124, 124);
@@ -367,6 +369,10 @@ background-color: rgba(128, 190, 253,0.3);
   input[type=text]:focus {
     width: 60%;
   }
+  input[type=text]:focus ~ #clear-search-btn {
+    right: 40.7%;
+  }
+
   .filter-bar-child {
     display: inline-block;
     margin: 0 10px;
@@ -417,13 +423,18 @@ select:focus {
   border-bottom-color: #DCDCDC;
 }
 
-
   @media screen and (max-width: 800px) {
+    input[type=text]:focus ~ #clear-search-btn {
+      right: 15%;
+    }
     #clear-search-btn {
       position: absolute;
-      right: 15%;
-      top: 14.7%;
+      right: 55%;
+      top: 131px;
+      -webkit-transition: right 0.4s ease-in-out;
+      transition: right 0.4s ease-in-out;
     }
+
     .filter-bar-child {
       width: 40%;
     }
@@ -442,6 +453,11 @@ select:focus {
     }
     .filter-bar-child span, .filter-bar-child select {
       display: block;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    #clear-search-btn {
+      right: 56.4%; 
     }
   }
 
