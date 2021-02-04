@@ -292,8 +292,9 @@ i{
     display: none;
   }
   .pagination-button {
-    margin: 10px auto;
-    width: 120px;
+    margin: 5px auto;
+    width: 200px;
+    outline: none;
   }
   #btn_prev, #btn_next {
     padding: 13px 20px;
