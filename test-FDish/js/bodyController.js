@@ -5,7 +5,7 @@ let categorySelect = document.getElementById('category-select');
 let difficultSelect = document.getElementById('difficult-select');
 let timeSelect = document.getElementById('time-select');
 let typeSelect = document.getElementById('type-select');
-
+let clearSearchButton = document.getElementById('clear-search-btn');
 
 // category filter
 function filterRecipes() {
@@ -63,12 +63,20 @@ typeSelect.addEventListener('change', () => {
     filterRecipes();
     currentSearchFilter();
 });
+clearSearchButton.addEventListener('click', () => {
+    clearSearchButton.style.display = 'none';
+    searchBar.value = '';
+    currentSearchFilter();
+})
 const searchBar = document.getElementById('search-bar');
 searchBar.addEventListener('keyup', (e) => {
+    // in case user not using clear btn to remove the text
+    if(searchBar.value == '') {
+        clearSearchButton.style.display = 'none';
+    }
+    clearSearchButton.style.display = 'block';
     currentSearchFilter();
 });
-// window.addEventListener('scroll', () => {
-//     console.log(window.pageYOffset);
-// })
+
 
 

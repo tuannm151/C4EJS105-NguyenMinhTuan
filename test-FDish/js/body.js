@@ -107,6 +107,10 @@ function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 function showDetailItem(itemID) {
+    // scroll form back to the top
+    $('#form').animate({
+        scrollTop: 0
+    },100);
     let recipeCategory = document.getElementsByClassName('more-detail-category');
     let thisRecipe = recipes.filter((recipe) => Number(recipe.id) == itemID);
     let thisRecipeIngredients = [];
@@ -163,14 +167,18 @@ function showDetailItem(itemID) {
     document.getElementsByClassName('grid')[0].style.position = 'fixed';
     document.getElementById("myBlog").style.display = "block";
 }
+// function for scroll to the top
+// function topFunction() {
+//     document.body.scrollTop = 0; // For Safari
+//     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+//   }
+
 // btn close detail item div
 function closeForm() {
     document.getElementById("myBlog").style.display = "none";
     document.getElementsByClassName('grid')[0].style.position = 'static';
-    console.log(yOffset);
     window.scroll(0,yOffset);
 }
-showDetailItem(0);
 // // admin page ---------- 
 // let tbody = document.getElementById('ts_body');
 // let listTr = tbody.getElementsByTagName("tr");
