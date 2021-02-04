@@ -63,11 +63,19 @@ typeSelect.addEventListener('change', () => {
     filterRecipes();
     currentSearchFilter();
 });
-clearSearchButton.addEventListener('click', () => {
-    searchBar.value = '';
-    currentSearchFilter();
-    clearSearchButton.style.display = 'none';
-})
+document.getElementById('search-bar-container').addEventListener('click', (e) => {
+    if(document.body.clientWidth >= 1700) {
+        if(e.target.tagName === 'DIV' || e.target.tagName === 'BUTTON') {
+            searchBar.value = '';
+            currentSearchFilter();
+            clearSearchButton.style.display = 'none'; 
+        }
+    } else {
+        searchBar.value = '';
+        currentSearchFilter();
+        clearSearchButton.style.display = 'none'; 
+    }
+});
 searchBar.addEventListener('keyup', () => {
     clearSearchButton.style.display = 'block';
     currentSearchFilter();

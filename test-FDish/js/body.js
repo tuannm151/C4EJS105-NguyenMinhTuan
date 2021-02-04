@@ -43,7 +43,8 @@ let currentPage = 1;
 let filteredRecipes = recipes;
 let searchedRecipes = recipes;
 let yOffset;
-
+let btn_next = document.getElementById("btn_next");
+let btn_prev = document.getElementById("btn_prev");
 numPages= () => {
     return Math.ceil(searchedRecipes.length / recipes_per_page);
 }
@@ -67,8 +68,6 @@ function showThisItem(clicked_id) {
 }
 
 showRecipes = (page) => {
-        let btn_next = document.getElementById("btn_next");
-        let btn_prev = document.getElementById("btn_prev");
         // let itemContainers = document.getElementsByClassName('content-item');
         item_container.innerHTML = '';
         for(let idx = (page-1)*recipes_per_page; idx < page*recipes_per_page && idx < searchedRecipes.length; idx++) { 
