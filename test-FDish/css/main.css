@@ -501,6 +501,10 @@ select:focus {
 .form-popup a{
   margin: 10px;
 }
+.more-detail-category span {
+  display: inline-block;
+  margin: 0 5px;
+}
 /* ================= =================*/
 .more-detail-ingredients-title i,.more-detail-instructions-title i{
   font-size: 25px !important;
