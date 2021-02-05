@@ -64,16 +64,10 @@ typeSelect.addEventListener('change', () => {
     currentSearchFilter();
 });
 document.getElementById('search-bar-container').addEventListener('click', (e) => {
-    if(document.body.clientWidth >= 1700) {
-        if(e.target.tagName === 'DIV' || e.target.tagName === 'BUTTON') {
-            searchBar.value = '';
+    if(e.target.tagName === 'I' || e.target.tagName === 'BUTTON' || (e.target.tagName === 'DIV' && document.body.clientWidth >= 1700)) {
+        searchBar.value = '';
             currentSearchFilter();
             clearSearchButton.style.display = 'none'; 
-        }
-    } else {
-        searchBar.value = '';
-        currentSearchFilter();
-        clearSearchButton.style.display = 'none'; 
     }
 });
 searchBar.addEventListener('keyup', () => {
@@ -84,9 +78,9 @@ searchBar.addEventListener('keyup', () => {
         clearSearchButton.style.display = 'none';
     }
 });
-// window.addEventListener('click', (e) => {
-//     console.log(e.target);
-// })
+window.addEventListener('click', (e) => {
+    console.log(e.target);
+})
 
 
 

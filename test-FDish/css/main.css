@@ -293,6 +293,7 @@ nav.left-menu {
     margin: 5px auto;
     width: 200px;
     outline: none;
+    text-align: center;
   }
   #btn_prev, #btn_next {
     padding: 13px 20px;
@@ -310,8 +311,8 @@ nav.left-menu {
   .search-bar{
     position: relative;
     width: 50%;
-    margin-left: 15px;
-    bottom: 10px;
+    margin-left: 14px;
+    bottom: 5px;
     margin-top: 7px;
   }
   .search-bar i {
@@ -374,40 +375,59 @@ background-color: rgba(128, 190, 253,0.3);
   }
 
   .filter-bar-child {
-    display: inline-block;
+    display: inline-flex;
     margin: 0 10px;
   }
-  .filter-bar-child span, .filter-bar-child select {
+  /* .filter-bar-child span, .filter-bar-child select {
     display: inline-block;
+  } */
+   .filter-bar-child span{
+    width: 50px;
+    border: 1px solid #ffffff;
+    border-right: none;
+    padding: 8px;
+    margin: 5px 0 5px 0px;
+    margin-right: none;
+    border-radius: 0;
   }
   .category-title {
-    margin-bottom: 3px;
     font-size: 20px;
     font-family: 'Noto Sans KR', sans-serif;
     color: gainsboro;
   }
+  .filter-bar-child:hover {
+    transform: translateY(-5px);
+    transition: 0.4s;
+  }
+
   select {
+    margin: 5px 0;
     outline: none;
-    width: 100%;
-    height: 35px;
-    font-size: 15px;
-    font-weight: bold;
+    width: 100px;
+    height: 50px;
     cursor: pointer;
     border-radius: 0;
     background: url('arrow.png');
     background-repeat: no-repeat;
     background-position: 95% 50%; 
-    background-color: #c0392b;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border: none;
-    border-bottom: 1px solid #962d22;
+    font-family: var(--font-main);
     color: white;
-    padding: 3px;
+    font-size: 20px;
+    font-weight: 300;
+    text-indent: 8px;
+    margin-left: 0px;
+    border: 1px solid #ffffff;
+    border-left: none;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     padding: 3px;
-    border-radius: 7px;
+    border-radius: 0;
+    
+  }
+  option{
+    border: 1px solid #ffffff;
+    border-radius: 8px;
   }
   /* For IE <= 11 */
   select::-ms-expand {
@@ -424,6 +444,13 @@ select:focus {
 }
 
   @media screen and (max-width: 800px) {
+    .filters-bar{
+      text-align: center;
+    }
+    select {
+      width: 100%;
+      font-size: 17px;
+    }
     #search-bar:focus ~ #clear-search-btn {
       right: 15%;
     }
@@ -434,9 +461,9 @@ select:focus {
       -webkit-transition: right 0.4s ease-in-out;
       transition: right 0.4s ease-in-out;
     }
-
     .filter-bar-child {
-      width: 40%;
+      width: 48%;
+      margin: 0 4px 0 0;
     }
     .search-bar{
       position: static;
@@ -452,7 +479,7 @@ select:focus {
       width: 170%;
     }
     .filter-bar-child span, .filter-bar-child select {
-      display: block;
+      display: inline-block;
     }
   }
 
