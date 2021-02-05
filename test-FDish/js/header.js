@@ -46,7 +46,10 @@ function closeLoginForm() {
         console.log(JSON.parse(localStorage.activeUser));
         alert('Login Successfully!');
         hideLoginModal();
-        location.reload();
+        // location.reload();
+        document.getElementById('user-page').style.display = 'block';
+        document.getElementById('sign-up').style.display = 'none';
+        document.getElementById('sign-in').style.display = 'none';
     } else {
         console.log(registeredStatus);
         alert('Username or password not valid');
