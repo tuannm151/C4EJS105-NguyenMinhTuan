@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500;700&family=Lobster&display=swap" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -41,8 +42,8 @@
         </nav>
 
         <div class="right-menu">
-          <button href="#" id="sign-in" class="sign-in"><a> Sign in</a></button>
-          <button href="#" id="sign-up" class="sign-up"><a> Sign up</a></button>
+          <button href="#" id="sign-in" onclick="signinToggle()" class="sign-in"><a> Sign in</a></button>
+          <button href="#" id="sign-up" onclick="signupToggle()" class="sign-up"><a> Sign up</a></button>
           <a style="font-size: 20px; margin: 0 !important;"> | </a>
 					<a href="#"><i class="fa fa-facebook-official" aria-hidden="true" style="color: blue;"></i></a>
 					<a href="#"><i class="fa fa-instagram" aria-hidden="true" style="color: deeppink;"></i></a>
@@ -64,7 +65,42 @@
    }
   </script>
 </header>
-
+<div class="login-container" id="login-container" style="display: none;">
+  <div class='container' onclick="closeLoginForm()">
+  </div>
+  <div class="signin-form">
+    <div class="form">
+      <!-- <div class="close" onclick="signinToggle()">&times;</div> -->
+      <div class="text">
+        <span class="icon ion-ios-locked-outline">
+      </div>
+      <form action="#">
+        <input type="text" placeholder="Username" id="input-username">
+        <input type="password" placeholder="Password" id="input-password">
+        <button onclick="logInFunction()" type="button"> SIGN IN</button>
+        <a href="#" class="forgot">Forgot your email or password?</a>
+      </form>
+    </div>
+  </div>
+  <div class="signup-form">
+    <div class="form">
+      <!-- <div class="close" onclick="signupToggle()">&times;</div> -->
+      <div class="text">
+        <span class="icon ion-ios-locked-outline">
+      </div>
+      <form action="#">
+        <div class="row">
+          <input type="text" placeholder="UserName"id="input-register-name">
+        </div>
+        <input type="email" placeholder="Email"id="input-register-email">
+        <input type="password" placeholder="Password"id="input-register-password">
+        <input type="password" placeholder="Confirm Password"id="input-register-confirm-password">
+        <button id="btn_reg" onclick="registerFunction()" type="button">SIGN UP</button>
+        
+      </form>
+    </div>
+  </div>
+</div>
 <div> <h2 align = "center" style="width: 75%; font-size: 30px;"> - Dish we offer - </h2> </div>
 <!-- FILTER AND SEARCH -->
 <div class="main-content-filter">
@@ -214,6 +250,8 @@
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script> 
     <script src="data/dishs/ingrediens.js"></script>
     <script src="data/dishs/recipes.js"></script>
+    <script src="data/userData/user-database.js"></script>
+    <script src="js/header.js"></script>
     <script src="js/body.js"></script>
     <script src="js/bodyController.js"></script>
     <script src='main.js'></script>

@@ -217,11 +217,9 @@ nav.left-menu {
   text-align: left;
   filter: brightness(130%);
 }
-i{
-  font-family: "Lobster", cursive;
-  font-weight: lighter;
-  text-decoration: none;
-  font-size: 20px !important;
+ .fa-times {
+  
+  
 }
 .title h3:hover{
   text-shadow: 0 0 5px #ffffff;
@@ -317,7 +315,7 @@ i{
     margin-top: 7px;
   }
   .search-bar i {
-    font-size: 30px;
+    font-size: 20px;
   }
   .search-bar, .filters-bar {
     display: inline-block;
@@ -351,7 +349,7 @@ background-color: rgba(128, 190, 253,0.3);
     display: block;
     padding: 10px;
   }
-  input[type=text] {
+  #search-bar {
     width: 30%;
     box-sizing: border-box;
     border: 2px solid #ccc;
@@ -368,10 +366,10 @@ background-color: rgba(128, 190, 253,0.3);
     transition: width 0.4s ease-in-out;
   }
   
-  input[type=text]:focus {
+  #search-bar:focus {
     width: 60%;
   }
-  input[type=text]:focus ~ #clear-search-btn {
+  #search-bar:focus ~ #clear-search-btn {
     right: 40.7%;
   }
 
@@ -426,7 +424,7 @@ select:focus {
 }
 
   @media screen and (max-width: 800px) {
-    input[type=text]:focus ~ #clear-search-btn {
+    #search-bar:focus ~ #clear-search-btn {
       right: 15%;
     }
     #clear-search-btn {
@@ -443,14 +441,14 @@ select:focus {
     .search-bar{
       position: static;
     }
-    input[type=text] {
+    #search-bar {
       width: 85%;
       margin-bottom: 5px;
     }
     .search-bar, .filters-bar {
       display: block;
     }
-    input[type=text]:focus {
+    #search-bar:focus {
       width: 170%;
     }
     .filter-bar-child span, .filter-bar-child select {

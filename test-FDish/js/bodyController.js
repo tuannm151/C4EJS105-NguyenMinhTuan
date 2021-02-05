@@ -84,6 +84,9 @@ searchBar.addEventListener('keyup', () => {
         clearSearchButton.style.display = 'none';
     }
 });
+// window.addEventListener('click', (e) => {
+//     console.log(e.target);
+// })
 
 
 
