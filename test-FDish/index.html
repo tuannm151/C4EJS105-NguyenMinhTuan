@@ -5,13 +5,12 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Fine Dish</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" href="user.css">
-    <link rel='stylesheet' media='screen' href='main.css'>
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="https://kit.fontawesome.com/193000bb3b.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500;700&family=Lobster&display=swap" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="css/user.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -42,7 +41,7 @@
         </nav>
 
         <div class="right-menu">
-          <div class="user-page" id='user-page' style="display: block;" onclick="openUserPage()"><i class="fas fa-user"></i></div>
+          <div class="user-page" id='user-page' style="display: none;" onclick="openUserPage()"><i class="fas fa-user"></i></div>
           <button href="#" id="sign-in" onclick="signinToggle()" class="sign-in"><a> Sign in</a></button>
           <button href="#" id="sign-up" onclick="signupToggle()" class="sign-up"><a> Sign up</a></button>
           <!-- <span style="font-size: 30px; margin: 0 !important; color: white;"> | </span> -->
@@ -66,6 +65,7 @@
    }
   </script>
 </header>
+<!-- LOGIN FORM -->
 <div class="login-container" id="login-container" style="display: none;">
   <div class='container' onclick="closeLoginForm()">
   </div>
@@ -101,6 +101,86 @@
       </form>
     </div>
   </div>
+</div>
+<!-- USER PAGE -->
+<div class="user-page-outer-container" style="display: none;">
+  <div class="user-page-blocker" onclick="closeUserPage()"></div>
+  <div class="container-user">
+    <div class="profile-header">
+      <div class="profile-img">
+        <img src="images/4.jpg" width="200" alt="Profile Image">
+      </div>
+      <div class="profile-nav-info">
+        <h3 class="user-name">Your Name</h3>
+        <div class="address" id="user-role">
+          <p id="state" class="state">HaNoi,</p>
+          <span id="country" class="country">Viet Nam.</span>
+        </div>
+  
+      </div>
+      <div class="profile-option">
+        <div class="notification">
+          <i class="fa fa-delicious" aria-hidden="true"></i>
+          <span class="alert-message">0</span>
+        </div>
+      </div>
+    </div>
+  
+    <div class="main-bd">
+      <div class="left-side">
+        <div class="profile-side">
+          <p class="user-mail"><i class="fa fa-envelope"></i> <span id="user-mail"> Brightisaac80@gmail.com</span></p>
+          <!-- <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-instagram"></a> -->
+          <div class="user-bio">
+  
+            <h3></h3>
+            <p class="bio" id="bio">
+             Add your recipe?
+            </p>
+  
+          </div>
+          <div class="profile-btn">
+            <button class="createbtn" id="Create-post"> <i class="fa fa-plus-circle" aria-hidden="true"></i> Create recipe</button>
+          </div>
+  
+        </div>
+  
+      </div>
+      <div class="right-side">
+        <script src="js/jquery-1.12.0.min.js"></script>
+        
+        <figure class="tabBlock">
+  
+          <ul class="tabBlock-tabs">
+            <li class="tabBlock-tab is-active"><i class="fa fa-delicious" aria-hidden="true"></i> Your Recipe</li>
+            <li class="tabBlock-tab"><i class="fa fa-star-o" aria-hidden="true"></i> Favorite</li>
+            <li class="tabBlock-tab"><i class="fas fa-cog"></i> Setting</li>
+          </ul>
+  
+          <div class="tabBlock-content">
+            <div class="tabBlock-pane">
+              <ul id="user-recipe">
+                
+              </ul>
+            </div>
+  
+            <div class="tabBlock-pane" >
+              <ul id="user-favorited">
+                
+              </ul>
+            </div>
+            <div class="tabBlock-pane" >
+              
+            </div>
+          </div>
+  
+        </figure>
+  
+        </div>
+    </div>
+  </div>
+  <div class="quit-user-page" onclick="closeUserPage()"><i class="fas fa-arrow-left"></i></div>
 </div>
 <div style="text-align: center;"> <h2  style="width: 100%; font-size: 30px;"> - Dishes we offer - </h2> </div>
 <!-- FILTER AND SEARCH -->
@@ -252,6 +332,7 @@
     <script src="data/dishs/ingrediens.js"></script>
     <script src="data/dishs/recipes.js"></script>
     <script src="data/userData/user-database.js"></script>
+    <script src="js/user.js"></script>
     <script src="js/header.js"></script>
     <script src="js/body.js"></script>
     <script src="js/bodyController.js"></script>

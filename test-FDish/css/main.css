@@ -217,10 +217,7 @@ nav.left-menu {
   text-align: left;
   filter: brightness(130%);
 }
- .fa-times {
-  
-  
-}
+
 .title h3:hover{
   text-shadow: 0 0 5px #ffffff;
   color: rgba(0, 0, 0, 0.281);
@@ -403,7 +400,7 @@ background-color: rgba(128, 190, 253,0.3);
   select {
     margin: 5px 0;
     outline: none;
-    width: 100px;
+    width: 120px;
     height: 50px;
     cursor: pointer;
     border-radius: 0;

@@ -78,6 +78,15 @@ searchBar.addEventListener('keyup', () => {
         clearSearchButton.style.display = 'none';
     }
 });
+// USER CLICK USER'S ICON OPEN USER PAGE
+function openUserPage() {
+    document.body.style.overflow = 'hidden';
+    $('.user-page-outer-container').css('display','block');
+}
+function closeUserPage() {
+    document.body.style.overflow = 'visible';
+    $('.user-page-outer-container').css('display','none');
+} 
 window.addEventListener('click', (e) => {
     console.log(e.target);
 })
