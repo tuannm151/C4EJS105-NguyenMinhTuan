@@ -147,7 +147,7 @@ function loadUserFavorited() {
   console.log(activeUser[0].favorite)
   for (let recipeID of activeUser[0].favorite) {
     let thisRecipe = recipes.filter((recipe) => recipe.id == recipeID);
-    if (thisRecipe != undefined) {
+    if (thisRecipe[0] != undefined) {
       userFavorited.insertAdjacentHTML('beforeend',
         `<li id="${recipeID}" onClick="showDetailItem(this.id);">${thisRecipe[0].name}</li>`
       )
@@ -160,7 +160,7 @@ function loadUserRecipe() {
   userRecipe.innerHTML = '';
   for (let recipeID of activeUser[0].created) {
     let thisRecipe = recipes.filter((recipe) => recipe.id == recipeID);
-    if (thisRecipe != undefined) {
+    if (thisRecipe[0] != undefined) {
       userRecipe.insertAdjacentHTML('beforeend',
         `<li id="${recipeID}" onClick="showDetailItem(this.id);">${thisRecipe[0].name}</li>`
       )

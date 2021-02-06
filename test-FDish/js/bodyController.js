@@ -105,6 +105,16 @@ function favoriteThisRecipe(idx) {
          document.querySelector('.love-action').classList.toggle('active');
     }
 }
+function openNewRecipePopup() {
+    document.body.style.overflow = 'hidden';
+    $('.new-recipes-container').css('display','block');
+    loadCurrentRecipeList();
+}
+function closeNewRecipePopup() {
+    document.body.style.overflow = 'visible';
+    $('.new-recipes-container').css('display','none');
+    showRecipes(currentPage);
+}
 // window.addEventListener('click', (e) => {
 //     console.log(e.target);
 // })

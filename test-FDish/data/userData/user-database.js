@@ -13,7 +13,7 @@ let userDatabase = [
         email: 'dummyemail123@gmail.com',
         role: 'user',
         favorite: ['4','3','2','1'],
-        created: [],
+        created: [12],
     },
     {
         username: 'dummyuser2',

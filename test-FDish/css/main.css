@@ -397,7 +397,7 @@ background-color: rgba(128, 190, 253,0.3);
     transition: 0.4s;
   }
 
-  select {
+.main-content-filter   select {
     margin: 5px 0;
     outline: none;
     width: 120px;
@@ -420,18 +420,18 @@ background-color: rgba(128, 190, 253,0.3);
     -moz-appearance: none;
     padding: 3px;
     border-radius: 0;
-    
+  
   }
   option{
     border: 1px solid #ffffff;
     border-radius: 8px;
   }
   /* For IE <= 11 */
-  select::-ms-expand {
+  .main-content-filter    select::-ms-expand {
     display: none; 
   }
-  select:hover,
-select:focus {
+  .main-content-filter    select:hover,
+  .main-content-filter  select:focus {
   color: #c0392b;
   background: url('arrow1.png');
     background-repeat: no-repeat;
@@ -444,7 +444,7 @@ select:focus {
     .filters-bar{
       text-align: center;
     }
-    select {
+    .main-content-filter   select {
       width: 100%;
       font-size: 17px;
     }

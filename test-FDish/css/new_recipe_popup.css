@@ -1,0 +1,294 @@
+/* SEPARATOR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    opacity: 0.8;
+    border-bottom: 1px solid rgb(149, 149, 149);
+}
+.separator::before {
+    margin-right: .25em;
+}
+.separator::after {
+    margin-left: .25em;
+}
+/* OUTER MOST CONTAINER */
+.new-recipes-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5002;
+    background: rgba(100, 100, 100, 0.5);
+}
+.new-recipes-blocker {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.new-recipes-popup {
+    position: fixed;
+    overflow-y: scroll;
+    max-width: 1000px;
+    background-color: #fff;
+    width: 700px;
+    height: 85%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 45%;
+    padding: 30px;
+    background-color: floralwhite;
+    box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 40%);
+    border: 2px solid #ffffff;
+    overflow-x: hidden;
+}
+.new-recipes-basis-info-con {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+.new-recipes-inputs, .new-recipes-category-selects {
+    flex: 45%;
+}
+.new-recipes-inputs {
+    padding: 10px;
+}
+.new-recipes-input {
+    margin-bottom: 10px;
+}
+.new-recipes-input span {
+    width: 80px;
+    display: inline-block;
+}
+
+.new-recipes-inputs input, .ingredient-amount input, .insutruction-input input{
+    height: 30px;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: none;
+    border: 2px solid #ccc;
+    width: 200px;
+    padding-left: 5px;
+}
+.insutruction-input input {
+    width: 90%;
+}
+.new-recipes-category-selects {
+    padding: 10px;
+}
+.new-recipes-category-select {
+    padding-bottom: 5px;
+}
+.new-recipes-category-select span{
+    width: 80px;
+    display: inline-block;
+}
+.new-recipes-popup  select {
+    outline: none;
+    width: 200px;
+    height: 35px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0;
+    background: url('arrow.png');
+    background-repeat: no-repeat;
+    background-position: 95% 50%; 
+    background-color: #c0392b;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    border-bottom: 1px solid #962d22;
+    color: white;
+    padding: 3px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 3px;
+    border-radius: 7px;
+  }
+.new-recipes-popup  select::-ms-expand {
+    display: none; 
+  }
+.new-recipes-popup   select:hover,
+.new-recipes-popup select:focus {
+  color: #c0392b;
+  background: url('arrow1.png');
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+  background-color: white;
+  border-bottom-color: #DCDCDC;
+}
+.ingredient-measurement {
+    font-size: 18px;
+    font-weight: bold;
+}
+.insutruction-input {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 800px) {
+    .new-recipes-confirm-button {
+        padding-top: 5px !important;
+        width: 200px !important;
+        height: 90px !important;
+    }
+    .new-recipes-confirm-button button{
+        margin: 5px 10px !important;
+        font-size: 14px;
+    }
+    .new-recipes-inputs, .new-recipes-category-selects {
+        flex: 40%;
+
+    }
+    .new-recipes-popup {
+        width: 101%;
+        height: 100%;
+    }
+    .new-recipes-category-select span{
+        display: block;
+    }
+    .new-recipes-ingredients-container  select {
+        width: 170px;
+        margin-bottom: 5px;
+    }
+}
+.new-recipes-ingredients-container {
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+.ingredients-left-con {
+    padding: 10px;
+    flex: 40%;
+}
+.ingredient-right-con {
+    padding: 10px 10px 10px 60px;
+    flex: 40%;
+}
+.ingredient-right-con h3 {
+    margin-bottom: 7px;
+}
+.new-ingredients-ul li{
+    font-size: 19px;
+    margin-bottom: 2px;
+}
+.ingredient-img {
+    margin-top: 7px;
+}
+.ingredient-info img{
+    width: 100%;
+}
+.ingredient-add-btn {
+    margin-top: 7px;
+    font-size: 13px;
+}
+.new-recipes-confirm-buttons-container {
+    text-align: center;
+    margin-top: 20px;
+}
+#ingredients-type {
+    margin-bottom: 5px;
+}
+.new-recipes-confirm-button {
+    background-color: white;
+    height: 70px;
+    padding-top: 20px;
+    width: 450px;
+    text-align: center;
+    margin: 0 auto;
+}
+.new-recipes-confirm-button button {
+    margin: 0 20px;
+}
+.ingredient-add-btn button, .new-recipes-instruction-btn button,.new-recipes-confirm-button button{
+    outline: none;
+    border: 0.5px rgba(124, 124, 124,0.5) solid;
+    width: 100px;
+    height: 30px;
+    background-color: lightgreen;
+    border-radius: 3px;
+}
+
+.new-recipes-instruction-btn button{
+    font-size: 18px;
+    color: rgb(63, 62, 62);
+}
+.ingredient-add-btn button:hover, .new-recipes-instruction-btn button:hover, .new-recipes-confirm-button button:hover, .insutruction-input button:hover, #recipes-table button:hover{
+    background-color: rgb(100, 240, 100);
+}
+.new-recipes-instruction-btn {
+    text-align: center;
+}
+@media (max-width: 800px) {
+    .insutruction-input input {
+        width: 90%;
+    }
+    .new-recipes-ingredients-container{
+        width: 100%;
+        padding: 5px;
+    }
+    .ingredients-left-con,  .ingredient-right-con {
+        flex: 100%;
+        padding: 0;
+    }
+}
+@media (max-width: 400px) {
+    .insutruction-input input {
+        width: 80%;
+    }
+}
+/* LIST RECIPES */
+#recipes-table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 15px 0;
+  }
+  #recipes-table button {
+    outline: none;
+    background-color: lightgreen;
+    width: 25px;
+    height: 25px;
+    margin-left: 2px;
+    border: 0.5px rgba(124, 124, 124,0.5) solid;
+  } 
+  #recipes-table td, #recipes-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #recipes-table tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #recipes-table tr:hover {background-color: #ddd;}
+  
+  #recipes-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+  }
+
+@media (max-width: 800px) {
+    .new-recipes-popup {
+        top: 50%;
+    }
+    #recipes-table td, #recipes-table th {
+        padding: 3px;
+    }
+    #recipes-table {
+        font-size: 14px;
+    }
+    .new-recipes-popup {
+        padding: 12px;
+    }
+}
+
+
