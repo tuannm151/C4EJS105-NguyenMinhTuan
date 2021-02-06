@@ -161,6 +161,15 @@ function showDetailItem(itemID) {
         `<li>${ins}</li>`
         )
     }
+    document.getElementById('favorited-amount').innerHTML = thisRecipe[0].favorited_amount;
+    // favorite btn
+    document.getElementsByClassName('love-action')[0].id = thisRecipe[0].id;
+    let favBtn = document.querySelector('.love-action');
+    if(activeUser[0].favorite.includes(thisRecipe[0].id)) {
+        favBtn.classList.add('active');
+    } else if(favBtn.classList.contains('active')) {
+        favBtn.classList.remove('active');
+    }
     // get current yOffset
     yOffset = window.pageYOffset;
     document.getElementsByClassName('grid')[0].style.position = 'fixed';

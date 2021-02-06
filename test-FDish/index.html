@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/193000bb3b.js" crossorigin="anonymous"></script>
 </head>
 <body>
   
@@ -290,8 +291,10 @@
                     </div>
                 </div>
                 <div class="comment-label-share">
-                  <div class="love action">
-                    <input type="radio" name="hearts" value="1"/>
+                  <div class="love-action" id="" onclick="favoriteThisRecipe(this.id)">
+                    <span class="fas fa-heart"></span>
+                    <span id="favorited-amount"></span>
+                    <div id="favorite-btn">Favorite</div>
                   </div>
                     <div class="share-article">
                        <h4>💌 Share.</h4>

@@ -630,6 +630,27 @@ select:focus {
 .more-detail-img-small {
   width: 65%;
 }
+.love-action {
+  border: 2px rgb(184,184,184) solid;
+  font-size: 18px;
+  color: rgb(184,184,184);
+  padding: 8px 10px 0px 10px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  text-align: left;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.love-action:hover {
+  border-color: #787878;
+  color: #787878;
+}
+.love-action.active {
+  border-color: #cc1919;
+  color: #cc1919;
+}
+
+
 /* OL LIST STYLE */
 @import url(https://fonts.googleapis.com/css?family=Montserrat:900|Raleway:400,400i,700,700i);
 /*** FONTS ***/

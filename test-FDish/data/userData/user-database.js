@@ -4,7 +4,7 @@ let userDatabase = [
         password: 'admin',
         email: 'adminemail12345@gmail.com',
         role: 'admin',
-        favorite: [0,2],
+        favorite: ['0','2'],
         created: [0,2],
     },
     {
@@ -12,7 +12,7 @@ let userDatabase = [
         password: '12345',
         email: 'dummyemail123@gmail.com',
         role: 'user',
-        favorite: [4,3,2,1],
+        favorite: ['4','3','2','1'],
         created: [],
     },
     {
@@ -27,7 +27,7 @@ let userDatabase = [
         password: 'lmao',
         email: 'eeeeeeeeeeeeeeeeeeeeeee',
         role: 'user',
-        favorite: [0,2],
+        favorite: ['8','7'],
         created: [],
     },
 ]

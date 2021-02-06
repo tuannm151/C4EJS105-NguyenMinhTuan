@@ -36,16 +36,16 @@ function logInFunction() {
     if (userDatabase[i].username == document.getElementById('input-username').value && userDatabase[i].password == document.getElementById('input-password').value) {
       registeredStatus = true;
       userIndex = i;
-      console.log(userDatabase[i]);
+      // console.log(userDatabase[i]);
       break;
     }
   }
   if (registeredStatus == true) {
-    console.log(userDatabase[userIndex]);
+    // console.log(userDatabase[userIndex]);
     activeUser[0] = userDatabase[userIndex];
-    console.log(activeUser[0]);
+    // console.log(activeUser[0]);
     localStorage.setItem('activeUser', JSON.stringify(activeUser));
-    console.log(JSON.parse(localStorage.activeUser));
+    // console.log(JSON.parse(localStorage.activeUser));
     alert('Login Successfully!');
     hideLoginModal();
     loadUserPage();
@@ -92,7 +92,7 @@ function registerFunction() {
     userDatabase.push(newUser);
     console.log(userDatabase);
     localStorage.setItem('userDatabase', JSON.stringify(userDatabase));
-    console.log(JSON.parse(localStorage.userDatabase));
+    // console.log(JSON.parse(localStorage.userDatabase));
     alert('Registered Successfully!');
     redirectToLogin();
   } else {
@@ -134,6 +134,7 @@ function redirectToLogin() {
   signupToggle();
   signinToggle();
 }
+
 // function redirectToRegister() {
 //   document.getElementById("register-form").hidden = false;
 //   document.getElementById("login-form").hidden = true;
@@ -142,6 +143,8 @@ function redirectToLogin() {
 //   document.getElementById("redirect-to-register").addEventListener('click', redirectToRegister);
 function loadUserFavorited() {
   let userFavorited = document.getElementById('user-favorited');
+  userFavorited.innerHTML = '';
+  console.log(activeUser[0].favorite)
   for (let recipeID of activeUser[0].favorite) {
     let thisRecipe = recipes.filter((recipe) => recipe.id == recipeID);
     if (thisRecipe != undefined) {
@@ -154,6 +157,7 @@ function loadUserFavorited() {
 
 function loadUserRecipe() {
   let userRecipe = document.getElementById('user-recipe');
+  userRecipe.innerHTML = '';
   for (let recipeID of activeUser[0].created) {
     let thisRecipe = recipes.filter((recipe) => recipe.id == recipeID);
     if (thisRecipe != undefined) {
@@ -171,3 +175,4 @@ function loadUserPage() {
   loadUserFavorited();
   loadUserRecipe();
 }
+

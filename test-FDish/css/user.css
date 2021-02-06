@@ -270,12 +270,14 @@ button.createbtn {
   display: none;
 }
 @media (max-width: 900px) {
+  .tabBlock-tabs {
+    text-align: center;
+  }
   .quit-user-page {
     display: block;
   }
-  .tabBlock-tabs {
-    text-align: center;
-    
+  .tabBlock-pane li {
+    text-decoration: underline;
   }
   .tabBlock-tab {
     width: 33.333%;
@@ -437,6 +439,7 @@ body .right-side{
   cursor: pointer;
   display: inline-block;
   font-weight: 600;
+  margin-left: 0;
   float: left;
   padding: 0.625rem 1.25rem;
   position: relative;
