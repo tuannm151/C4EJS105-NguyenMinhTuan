@@ -437,7 +437,7 @@ body .right-side{
   color: #b5a8c5;
   box-shadow: 0px 3px 5px #222;
   cursor: pointer;
-  display: inline-block;
+  /* display: inline-block; */
   font-weight: 600;
   margin-left: 0;
   float: left;
@@ -450,7 +450,6 @@ body .right-side{
   border-right-style: solid;
 }
 .tabBlock-tab::before, .tabBlock-tab::after {
-  content: "";
   display: block;
   height: 4px;
   position: absolute;
