@@ -39,3 +39,11 @@ let activeUser = [{
     favorite: [],
     created: [],
 }];
+let noUser = [{
+    username: 'no user logged in',
+    password: 'a',
+    email: 'a',
+    role: 'none',
+    favorite: [],
+    created: [],
+}];

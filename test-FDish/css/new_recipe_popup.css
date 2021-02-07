@@ -38,11 +38,11 @@
     overflow-y: scroll;
     max-width: 1000px;
     background-color: #fff;
-    width: 700px;
+    width: 800px;
     height: 85%;
     transform: translate(-50%, -50%);
-    left: 50%;
-    top: 45%;
+    left: 60%;
+    top: 55%;
     padding: 30px;
     background-color: floralwhite;
     box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 40%);
@@ -62,12 +62,15 @@
 }
 .new-recipes-input {
     margin-bottom: 10px;
+    vertical-align: middle;
+}
+.new-recipes-input input{
+    background-image: none !important;
 }
 .new-recipes-input span {
     width: 80px;
     display: inline-block;
 }
-
 .new-recipes-inputs input, .ingredient-amount input, .insutruction-input input{
     height: 30px;
     border-radius: 5px;
@@ -133,7 +136,7 @@
     text-align: center;
     margin-bottom: 10px;
 }
-
+/* *************** Responsive New Recipe **************** */
 @media (max-width: 800px) {
     .new-recipes-confirm-button {
         padding-top: 5px !important;
@@ -158,6 +161,13 @@
     .new-recipes-ingredients-container  select {
         width: 170px;
         margin-bottom: 5px;
+    }
+    .new-recipes-popup {
+        max-width: 1000px;
+        height: 99%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
     }
 }
 .new-recipes-ingredients-container {
@@ -226,6 +236,9 @@
 .new-recipes-instruction-btn {
     text-align: center;
 }
+.new-recipes-container .quit-user-page{
+    color: #111;
+}
 @media (max-width: 800px) {
     .insutruction-input input {
         width: 90%;
@@ -244,14 +257,14 @@
         width: 80%;
     }
 }
-/* LIST RECIPES */
+/*================== LIST RECIPES ================== */
 #recipes-table {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
     margin: 15px 0;
   }
-  #recipes-table button {
+#recipes-table button {
     outline: none;
     background-color: lightgreen;
     width: 25px;
@@ -259,23 +272,23 @@
     margin-left: 2px;
     border: 0.5px rgba(124, 124, 124,0.5) solid;
   } 
-  #recipes-table td, #recipes-table th {
+#recipes-table td, #recipes-table th {
     border: 1px solid #ddd;
     padding: 8px;
   }
   
-  #recipes-table tr:nth-child(even){background-color: #f2f2f2;}
+#recipes-table tr:nth-child(even){background-color: #f2f2f2;}
   
-  #recipes-table tr:hover {background-color: #ddd;}
+#recipes-table tr:hover {background-color: #ddd;}
   
-  #recipes-table th {
+#recipes-table th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
     background-color: #4CAF50;
     color: white;
-  }
-
+}
+/* *************** Responsive New Recipes - User **************** */
 @media (max-width: 800px) {
     .new-recipes-popup {
         top: 50%;

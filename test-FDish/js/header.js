@@ -46,8 +46,8 @@ function logInFunction() {
     // console.log(activeUser[0]);
     localStorage.setItem('activeUser', JSON.stringify(activeUser));
     // console.log(JSON.parse(localStorage.activeUser));
-    alert('Login Successfully!');
-    hideLoginModal();
+    document.querySelector('.login-confirmed').classList.add('confirmed');
+    setTimeout(hideLoginModal,2000);
     loadUserPage();
     // location.reload();
     document.getElementById('user-page').style.display = 'block';
@@ -56,7 +56,7 @@ function logInFunction() {
   } else {
     console.log(registeredStatus);
     alert('Username or password not valid');
-    document.getElementById('input-username').value = '';
+    document.getElementById('input-usernscrolledame').value = '';
     document.getElementById('input-password').value = '';
   }
 }
@@ -93,8 +93,8 @@ function registerFunction() {
     console.log(userDatabase);
     localStorage.setItem('userDatabase', JSON.stringify(userDatabase));
     // console.log(JSON.parse(localStorage.userDatabase));
-    alert('Registered Successfully!');
-    redirectToLogin();
+    document.querySelector('.signup-confirmed').classList.add('confirmed');
+    setTimeout(redirectToLogin,2000);
   } else {
     alert('Password & confirmed password must match');
     document.getElementById('input-register-password').value = '';
@@ -129,10 +129,19 @@ function showLoginModal() {
 }
 function hideLoginModal() {
   loginContainer.style.display = 'none';
+  document.querySelector('.signup-confirmed').classList.remove('confirmed');
+  document.querySelector('.login-confirmed').classList.remove('confirmed');
 }
 function redirectToLogin() {
   signupToggle();
   signinToggle();
+}
+function signOut() {
+  activeUser[0] = noUser[0];
+  document.getElementById('user-page').style.display = 'none';
+    document.getElementById('sign-up').style.display = 'block';
+    document.getElementById('sign-in').style.display = 'block';
+    closeUserPage();
 }
 
 // function redirectToRegister() {

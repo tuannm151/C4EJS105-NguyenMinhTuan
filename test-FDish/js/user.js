@@ -1,6 +1,3 @@
-
-
-
 var TabBlock = {
   s: {
     animLen: 200

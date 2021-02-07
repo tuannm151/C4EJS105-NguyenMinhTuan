@@ -91,6 +91,10 @@ showRecipes = (page) => {
             btn_next.style.visibility = "visible";
         }
         allItems = document.getElementsByClassName("item");
+        function resizeInstance(instance){
+            item = instance.elements[0];
+          resizeGridItem(item);
+   }        
   for(x=0;x<allItems.length;x++){
     imagesLoaded( allItems[x], resizeInstance);
   }
@@ -138,7 +142,7 @@ function showDetailItem(itemID) {
             thisRecipeType = 'Bữa sáng';
             break;
     }
-    let allCategory = `<span>🌏 ${thisRecipeCategory}</span> <span>✅ Độ khó: ${capitalizeFirstLetter(thisRecipe[0].difficult)}</span> <span>🕗 </i>Thời gian: ${thisRecipe[0].time} min</span> <span>🍴 Loại: ${thisRecipeType}</span>`;
+    let allCategory = `<span><i class="fa fa-map-o" aria-hidden="true"></i>. ${thisRecipeCategory}</span>| <span><i class="fa fa-check-square" aria-hidden="true"></i>. ${capitalizeFirstLetter(thisRecipe[0].difficult)}</span>| <span><i class="fa fa-clock-o" aria-hidden="true"></i>. ${thisRecipe[0].time} min</span>| <span><i class="fa fa-cutlery" aria-hidden="true"></i>. ${thisRecipeType}</span>`
     recipeCategory[0].innerHTML = allCategory;
     document.getElementById('more-detail-img-big').src = thisRecipe[0].img;
     document.getElementById('more-detail-img-small').src = thisRecipe[0].img;
@@ -183,6 +187,10 @@ function closeForm() {
     document.getElementsByClassName('grid')[0].style.position = 'static';
     window.scroll(0,yOffset);
 }
+// prev, next btn reveal 
+// $(window).scroll(function(){
+//     $('#btn_next').addClass('scrolled', $(this).scrollTop() > 1000);
+// });
 
 
 
