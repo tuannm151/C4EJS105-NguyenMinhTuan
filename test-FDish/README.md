@@ -1,3 +1,2 @@
 
-# Clicking below
-[DEMO](https://sptungg.github.io/#)
+[DEMO](https://zenkjiexs.github.io/C4EJS105-NguyenMinhTuan/test-FDish/)
